@@ -38,6 +38,6 @@ assign top2 = A? (B? ~(C|D) : (C^D)) : (B? (C^D) : (C&D));
 assign bot2 = E? (F? ~(G|H) : (G^H)) : (F? (G^H) : (G&H));
 assign top1 = A^B^C^D;
 assign bot1 = E^F^G^H;
-assign Mux = top1? (bot1? (~(top2|bot2)&Self) : ((top2^bot2)&~Self)) : (bot1? ((top2^bot2)&~Self) : ((top2^bot2)&Self));
+assign Mux = top1? (bot1? (~(top2|bot2)&Self) : (top2^bot2)) : (bot1? (top2^bot2) : ((top2^bot2)&Self));
 assign Q = Mux & ~top4 &~bot4;
 endmodule
