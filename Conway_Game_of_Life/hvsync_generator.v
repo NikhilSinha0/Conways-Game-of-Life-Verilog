@@ -10,38 +10,56 @@
 // 0                                 490    491  525 (lines)
 // -----------------------------------|______|-------
 
-module hvsync_generator(clk, reset,vga_h_sync, vga_v_sync, inDisplayArea, CounterX, CounterY);
+module hvsync_generator(clk, reset,vga_h_sync, vga_v_sync, inDisplayArea, CounterX, CounterY, x, y);
 input clk;
 input reset;
 output vga_h_sync, vga_v_sync;
 output inDisplayArea;
 output [9:0] CounterX;
 output [9:0] CounterY;
+output [5:0] x;
+output [5:0] y;
 
 //////////////////////////////////////////////////
 reg [9:0] CounterX;
 reg [9:0] CounterY;
+reg [5:0] x;
+reg [5:0] y;
 reg vga_HS, vga_VS;
 reg inDisplayArea;
 //increment column counter
 always @(posedge clk)
 begin
-   if(reset)
+   if(reset) begin
       CounterX <= 0;
-   else if(CounterX==10'h320)
+		x <= 0;
+		end
+   else if(CounterX==10'h320) begin
 	   CounterX <= 0;
-   else
+		x <= 0;
+		end
+   else begin
 	   CounterX <= CounterX +1;
+		if (CounterX[3:0] == 4'b0000)
+			x <= x + 1;
+		end
 end
 //increment row counter
 always @(posedge clk)
 begin
-   if(reset)
+   if(reset) begin
       CounterY<=0; 
-   else if(CounterY==10'h209)    //521
+		y <= 0;
+		end
+   else if(CounterY==10'h209) begin   //521
       CounterY<=0;
-   else if(CounterX==10'h320)    //800
+		y <= 0;
+		end
+   else if(CounterX==10'h320) begin   //800
       CounterY <= CounterY + 1;
+		if (CounterY[3:0] == 4'b0000)
+			y <= y + 1;
+		end
 end
 //generate synchronization signal for both vertical and horizontal
 always @(posedge clk)

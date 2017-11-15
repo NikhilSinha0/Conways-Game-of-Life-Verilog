@@ -36,8 +36,10 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire inDisplayArea;
 	wire [9:0] CounterX;
 	wire [9:0] CounterY;
+	wire [5:0] x;
+	wire [5:0] y;
 
-	hvsync_generator syncgen(.clk(clk), .reset(reset),.vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
+	hvsync_generator syncgen(.clk(clk), .reset(reset), .vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY), .x(x), .y(y));
 	
 	/////////////////////////////////////////////////////////////////
 	///////////////		VGA control starts here		/////////////////
@@ -54,9 +56,37 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 				position<=position-2;	
 		end
 
-	wire R = CounterY>=(position-10) && CounterY<=(position+10) && CounterX[8:5]==7;
-	wire G = CounterX>100 && CounterX<200 && CounterY[5:3]==7;
-	wire B = 0;
+	reg [63:0] GameMatrix [15:0][15:0];
+	
+	integer i;
+	integer j;
+	
+	wire bounded = CounterY < 256 && CounterX < 256;
+	
+	always @(*)
+		begin
+			for (i = 0; i < 15; i = i + 1)
+				begin
+					for (j = 0; j < 15; j = j + 1)
+						begin
+							GameMatrix[i][j] <= 0;
+						end
+				end
+			GameMatrix[0][5] <= 1;
+			GameMatrix[0][2] <= 1;
+			GameMatrix[5][5] <= 1;
+			GameMatrix[5][0] <= 1;
+		end
+	
+	wire isAlive = bounded ? GameMatrix[x][y] : 0;
+		
+
+	//wire R = CounterY>=(position-10) && CounterY<=(position+10) && CounterX[8:5]==7;
+	//wire G = CounterX>100 && CounterX<200 && CounterY[5:3]==7;
+	//wire B = 0;
+	wire R = isAlive;
+	wire G = isAlive;
+	wire B = isAlive;
 	
 	always @(posedge clk)
 	begin
