@@ -8,7 +8,11 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<<<<<<< HEAD
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/Conways_top.v&quot; into library work</arg>
+=======
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Win10/Documents/GitHub/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.v&quot; into library work</arg>
+>>>>>>> 0d961b54a5a211a101ed9e05a5454b912b90af4d
 </msg>
 
 </messages>

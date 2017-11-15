@@ -1,12 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2017-11-14T18:37:22</DateModified>
   <ModuleName>Conways_top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/iseconfig/ConwayInput.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life\</ImplementationReportsDirectory>
+  <DateInitialized>2017-11-14T18:37:22</DateInitialized>
+=======
+  <DateModified>2017-11-14T18:34:51</DateModified>
+  <ModuleName>ConwayInput</ModuleName>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Win10/Documents/GitHub/EE354-Final-Project/Conway_Game_of_Life/iseconfig/ConwayInput.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Win10/Documents/GitHub/EE354-Final-Project/Conway_Game_of_Life\</ImplementationReportsDirectory>
-  <DateInitialized>2017-11-14T18:37:22</DateInitialized>
+  <DateInitialized>2017-11-13T16:27:55</DateInitialized>
+>>>>>>> 0d961b54a5a211a101ed9e05a5454b912b90af4d
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
