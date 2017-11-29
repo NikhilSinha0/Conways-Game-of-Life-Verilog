@@ -38,7 +38,8 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	wire inDisplayArea;
 	wire [9:0] CounterX;
 	wire [9:0] CounterY;
-	reg [64:0] RegArray [0:48];
+	reg [63:0] RegArray [0:47];
+	reg state;
 	integer i, j;
 
 	hvsync_generator syncgen(.clk(clk), .reset(reset),.vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
@@ -80,7 +81,7 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 				for(j = 0; j < 64; j = j + 1)
 				begin
 					if((Sw0 && i > 36 && j > 32)||(Sw1 && i > 36 && j < 32)||(Sw2 && i < 36 && i > 24 && j > 32)||(Sw3 && i > 24 && i < 36 && j < 32)||
-					(Sw4 && i > 12 && i < 23 && j < 32)||(Sw5 && i > 12 && i < 23 && j > 32)||(Sw6 && i < 12 && j > 32)||(Sw7 && i < 12 && j > 32))
+					(Sw4 && i > 12 && i < 23 && j > 32)||(Sw5 && i > 12 && i < 23 && j < 32)||(Sw6 && i < 12 && j > 32)||(Sw7 && i < 12 && j < 32))
 						RegArray[i][j]<=1'b1;
 					else
 						RegArray[i][j]<=0;
@@ -126,26 +127,14 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	/////////////////////////////////////////////////////////////////
 	//////////////  	  LD control starts here 	 ///////////////////
 	/////////////////////////////////////////////////////////////////
-	`define QI 			2'b00
-	`define QGAME_1 	2'b01
-	`define QGAME_2 	2'b10
-	`define QDONE 		2'b11
 	
 	reg [3:0] p2_score;
 	reg [3:0] p1_score;
-	reg [1:0] state;
+	
 	wire LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7;
 	
-	assign LD0 = (p1_score == 4'b1010);
-	assign LD1 = (p2_score == 4'b1010);
-	
-	assign LD2 = start;
-	assign LD4 = reset;
-	
-	assign LD3 = (state == `QI);
-	assign LD5 = (state == `QGAME_1);	
-	assign LD6 = (state == `QGAME_2);
-	assign LD7 = (state == `QDONE);
+	assign {LD7, LD6, LD5, LD4} = {state, ~state, 1'b0, 1'b0};
+	assign {LD3, LD2, LD1, LD0} = {btnL, btnU, btnR, btnD}; // Reset is driven by BtnC
 	
 	/////////////////////////////////////////////////////////////////
 	//////////////  	  LD control ends here 	 	////////////////////
@@ -158,10 +147,10 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	wire 	[3:0]	SSD0, SSD1, SSD2, SSD3;
 	wire 	[1:0] ssdscan_clk;
 	
-	assign SSD3 = 4'b1111;
-	assign SSD2 = 4'b1111;
-	assign SSD1 = 4'b1111;
-	assign SSD0 = position[3:0];
+	assign SSD3 = {Sw7, Sw6, Sw5, Sw4};
+	assign SSD2 = {Sw3, Sw2, Sw1, Sw0};
+	assign SSD1 = {Sw7, Sw6, Sw5, Sw4};
+	assign SSD0 = {Sw3, Sw2, Sw1, Sw0};
 	
 	// need a scan clk for the seven segment display 
 	// 191Hz (50MHz / 2^18) works well

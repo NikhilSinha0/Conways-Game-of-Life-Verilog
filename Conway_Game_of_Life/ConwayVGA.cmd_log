@@ -25,3 +25,22 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off ConwayVGA_map.ncd ConwayVGA.ncd ConwayVGA.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ConwayVGA.twx ConwayVGA.ncd -o ConwayVGA.twr ConwayVGA.pcf -ucf nexys3.ucf 
 bitgen -intstyle ise -f ConwayVGA.ut ConwayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.xst" -ofn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 "ConwayVGA.ngc" ConwayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ConwayVGA_map.ncd ConwayVGA.ngd ConwayVGA.pcf 
+par -w -intstyle ise -ol high -mt off ConwayVGA_map.ncd ConwayVGA.ncd ConwayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ConwayVGA.twx ConwayVGA.ncd -o ConwayVGA.twr ConwayVGA.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ConwayVGA.ut ConwayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.xst" -ofn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 "ConwayVGA.ngc" ConwayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ConwayVGA_map.ncd ConwayVGA.ngd ConwayVGA.pcf 
+par -w -intstyle ise -ol high -mt off ConwayVGA_map.ncd ConwayVGA.ncd ConwayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ConwayVGA.twx ConwayVGA.ncd -o ConwayVGA.twr ConwayVGA.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ConwayVGA.ut ConwayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.xst" -ofn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.syr" 
+xst -intstyle ise -ifn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.xst" -ofn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 "ConwayVGA.ngc" ConwayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ConwayVGA_map.ncd ConwayVGA.ngd ConwayVGA.pcf 
+par -w -intstyle ise -ol high -mt off ConwayVGA_map.ncd ConwayVGA.ncd ConwayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ConwayVGA.twx ConwayVGA.ncd -o ConwayVGA.twr ConwayVGA.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ConwayVGA.ut ConwayVGA.ncd 

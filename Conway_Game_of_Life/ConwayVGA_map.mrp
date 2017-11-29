@@ -10,21 +10,21 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 28 18:29:04 2017
+Mapped Date    : Tue Nov 28 18:59:23 2017
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    58 out of  18,224    1%
-    Number used as Flip Flops:                  58
+  Number of Slice Registers:                    57 out of  18,224    1%
+    Number used as Flip Flops:                  57
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        124 out of   9,112    1%
-    Number used as logic:                      121 out of   9,112    1%
-      Number using O6 output only:              50
+  Number of Slice LUTs:                        131 out of   9,112    1%
+    Number used as logic:                      128 out of   9,112    1%
+      Number using O6 output only:              57
       Number using O5 output only:              36
       Number using O5 and O6:                   35
       Number used as ROM:                        0
@@ -35,15 +35,15 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    55 out of   2,278    2%
+  Number of occupied Slices:                    52 out of   2,278    2%
   Number of MUXCYs used:                        64 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          125
-    Number with an unused Flip Flop:            68 out of     125   54%
-    Number with an unused LUT:                   1 out of     125    1%
-    Number of fully used LUT-FF pairs:          56 out of     125   44%
+  Number of LUT Flip Flop pairs used:          131
+    Number with an unused Flip Flop:            75 out of     131   57%
+    Number with an unused LUT:                   0 out of     131    0%
+    Number of fully used LUT-FF pairs:          56 out of     131   42%
     Number of unique control sets:               6
     Number of slice register sites lost
-      to control set restrictions:              30 out of  18,224    1%
+      to control set restrictions:              31 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -65,11 +65,11 @@ Specific Feature Utilization:
     Number used as BUFGs:                        2
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
-  Number of ILOGIC2/ISERDES2s:                   1 out of     248    1%
-    Number used as ILOGIC2s:                     1
-    Number used as ISERDES2s:                    0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -83,9 +83,9 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.89
+Average Fanout of Non-Clock Nets:                3.04
 
-Peak Memory Usage:  407 MB
+Peak Memory Usage:  405 MB
 Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   6 secs 
 
@@ -113,15 +113,6 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network Sw7_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 6 more times for the following
-   (max. 5 shown):
-   Sw6_IBUF,
-   Sw5_IBUF,
-   Sw4_IBUF,
-   Sw3_IBUF,
-   Sw2_IBUF
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -139,10 +130,23 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+   1 block(s) removed
    2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "BUF3" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -179,7 +183,7 @@ Section 6 - IOB Properties
 | LD4                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | LD5                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | LD6                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| LD7                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LD7                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | Mt_St_oe_bar                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | Mt_St_we_bar                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | Mt_ce_bar                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
@@ -195,7 +199,7 @@ Section 6 - IOB Properties
 | Sw7                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | btnC                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | btnD                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| btnL                               | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| btnL                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | btnR                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | btnU                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | vga_b                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
