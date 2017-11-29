@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-TB6IRDK::  Tue Nov 28 18:59:32 2017
+DESKTOP-TB6IRDK::  Tue Nov 28 20:14:52 2017
 
 par -w -intstyle ise -ol high -mt off ConwayVGA_map.ncd ConwayVGA.ncd
 ConwayVGA.pcf 
@@ -101,7 +101,7 @@ Phase  1  : 603 unrouted;      REAL time: 3 secs
 
 Phase  2  : 506 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 205 unrouted;      REAL time: 4 secs 
+Phase  3  : 205 unrouted;      REAL time: 3 secs 
 
 Phase  4  : 205 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
@@ -174,7 +174,7 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 5 secs 
-Total CPU time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 4 secs 
 
 Peak Memory Usage:  352 MB
 

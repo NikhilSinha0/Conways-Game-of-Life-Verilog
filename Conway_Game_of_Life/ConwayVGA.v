@@ -80,8 +80,8 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 			begin
 				for(j = 0; j < 64; j = j + 1)
 				begin
-					if((Sw0 && i > 36 && j > 32)||(Sw1 && i > 36 && j < 32)||(Sw2 && i < 36 && i > 24 && j > 32)||(Sw3 && i > 24 && i < 36 && j < 32)||
-					(Sw4 && i > 12 && i < 23 && j > 32)||(Sw5 && i > 12 && i < 23 && j < 32)||(Sw6 && i < 12 && j > 32)||(Sw7 && i < 12 && j < 32))
+					if((Sw0 && i > 24 && j > 48)||(Sw1 && i < 24 && j > 48)||(Sw2 && i > 24 && j > 32 && j < 48)||(Sw3 && i < 24 && j < 48 && j > 32)||
+					(Sw4 && i > 24 && j < 32 && j > 16)||(Sw5 && i < 24 && j < 32 && j > 16)||(Sw6 && i > 24 && j < 16)||(Sw7 && i < 24 && j < 16))
 						RegArray[i][j]<=1'b1;
 					else
 						RegArray[i][j]<=0;
@@ -127,9 +127,6 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	/////////////////////////////////////////////////////////////////
 	//////////////  	  LD control starts here 	 ///////////////////
 	/////////////////////////////////////////////////////////////////
-	
-	reg [3:0] p2_score;
-	reg [3:0] p1_score;
 	
 	wire LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7;
 	
