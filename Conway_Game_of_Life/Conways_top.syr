@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Conways_top.prj
 
@@ -105,16 +105,29 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\InputCounter.v" into library work
+Parsing module <ConwayInput>.
 Analyzing Verilog file "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" into library work
 Parsing module <Conways_top>.
-ERROR:HDLCompiler:69 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 98: <q_Sub> is not declared.
+WARNING:HDLCompiler:248 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 92: Block identifier is required on this block
+WARNING:HDLCompiler:248 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 90: Block identifier is required on this block
+WARNING:HDLCompiler:248 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 101: Block identifier is required on this block
+WARNING:HDLCompiler:248 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 111: Block identifier is required on this block
+ERROR:HDLCompiler:46 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 90: i is not a genvar
+ERROR:HDLCompiler:44 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 90: i is not a constant
+ERROR:HDLCompiler:46 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 92: j is not a genvar
+ERROR:HDLCompiler:44 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 92: j is not a constant
+ERROR:HDLCompiler:46 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 101: i is not a genvar
+ERROR:HDLCompiler:44 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 101: i is not a constant
+ERROR:HDLCompiler:46 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 111: j is not a genvar
+ERROR:HDLCompiler:44 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 111: j is not a constant
 ERROR:HDLCompiler:598 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v" Line 14: Module <Conways_top> ignored due to previous errors.
 Verilog file C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\Conways_top.v ignored due to errors
 --> 
 
-Total memory usage is 242068 kilobytes
+Total memory usage is 245912 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    9 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -49,13 +49,11 @@ module Conways_top
 	wire		board_clk, sys_clk;
 	wire [1:0] 	ssdscan_clk;
 	reg [26:0]	DIV_CLK;
-	wire [0:8] WireArray [7:0];
-	reg [0:8] RegArray [7:0];
+	wire [7:0] WireArray [0:640];
+	reg [7:0] RegArray [0:640];
 	wire Start_Ack_Pulse;
 	wire in_AB_Pulse, CEN_Pulse, BtnR_Pulse, BtnU_Pulse;
 	wire q_I, q_Run;
-	reg [7:0] Ain; 
-	reg [7:0] Bin;
 	reg [3:0]	SSD;
 	wire [3:0]	SSD3, SSD2, SSD1, SSD0; 
 	reg [7:0]  SSD_CATHODES; 
@@ -86,8 +84,8 @@ always @(posedge board_clk, posedge Reset)
 // INPUT: SWITCHES & BUTTONS
 	// BtnL is used as both Start and Acknowledge. 
 	// To make this possible, we need a single clock producing  circuit.
-	
-	for(i = 1; i < 479; i = i + 1)
+	/*
+	for(i = 0; i < 479; i = i + 1)
 			begin
 				for(j = 1; j < 639; j = j + 1)
 				begin
@@ -97,7 +95,7 @@ always @(posedge board_clk, posedge Reset)
 				end
 			end
 			
-	for(i = 1; i < 479; i = i + 1)
+	for(i = 0; i < 479; i = i + 1)
 			begin
 				ConwayInput(1'b0, RegArray[i-1][0], RegArray[i-1][1],
 					1'b0, RegArray[i][1], RegArray[i+1][0], 1'b0, RegArray[i+1][1],
@@ -107,7 +105,7 @@ always @(posedge board_clk, posedge Reset)
 					RegArray[i][639], WireArray[i][639]);
 			end
 			
-	for(j = 1; j < 639; j = j + 1)
+	for(j = 0; j < 639; j = j + 1)
 			begin
 				ConwayInput(1'b0, 1'b0, 1'b0,
 					RegArray[0][j-1], RegArray[0][j+1], RegArray[1][j], RegArray[1][j-1], RegArray[1][j+1],
@@ -129,12 +127,13 @@ always @(posedge board_clk, posedge Reset)
 	ConwayInput(RegArray[478][638], RegArray[478][639], 1'b0,
 					RegArray[479][638], 1'b0, 1'b0, 1'b0, 1'b0,
 					RegArray[479][639], WireArray[479][639]);
-	
+	*/
 	
 //------------
 // DESIGN
 	always @ (posedge sys_clk, posedge Reset)
 	begin
+		reg top4, top2, top1, bot4, bot2, bot1, Mux, A, B, C, D, E, F, G, H;
 		if(Reset)
 		begin
 			state<=0;
@@ -142,23 +141,48 @@ always @(posedge board_clk, posedge Reset)
 			begin
 				for(j = 0; j < 640; j = j + 1)
 				begin
-					RegArray[j][i]<=0;
+					if(Sw0 && i > 400)
+						RegArray[i][j]<=1'b1;
+					else
+						RegArray[i][j]<=0;
 				end
 			end
 		end
-		else if(state==0)
-			state<=state;
+		else if(BtnC)
+			state<=1'b0;
 		else if(BtnR)
-			state<=state^(1'b1);
-		else if(state==1)
+			state<=1'b1;
+		else if(state==1'b1)
 		begin
-			RegArray<=WireArray;
+			for(i = 0; i < 480; i = i + 1)
+			begin
+				for(j = 0; j < 640; j = j + 1)
+				begin
+					A = (i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					B = (i==0) ? 1'b0 : RegArray[i-1][j-1];
+					C = (i==0 || j==639) ? 1'b0 : RegArray[i-1][j-1];
+					D = (j==639) ? 1'b0 : RegArray[i-1][j-1];
+					E = (i==479 || j==639) ? 1'b0 : RegArray[i-1][j-1];
+					F = (i==479) ? 1'b0 : RegArray[i-1][j-1];
+					G = (i==479 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					H = (i==0) ? 1'b0 : RegArray[i-1][j-1];
+					top4 = A&B&C&D;
+					bot4 = E&F&G&H;
+					top2 = A? (B? ~(C|D) : (C^D)) : (B? (C^D) : (C&D));
+					bot2 = E? (F? ~(G|H) : (G^H)) : (F? (G^H) : (G&H));
+					top1 = A^B^C^D;
+					bot1 = E^F^G^H;
+					Mux = top1? (bot1? (~(top2|bot2)&RegArray[i][j]) : (top2^bot2)) : (bot1? (top2^bot2) : ((top2^bot2)&RegArray[i][j]));
+					RegArray[i][j] = Mux & ~top4 &~bot4;
+					//RegArray[i][j]<=WireArray[i][j];
+				end
+			end
 		end
 	end
 //------------
 // OUTPUT: LEDS
 	
-	assign {Ld7, Ld6, Ld5, Ld4} = {q_I, q_Sub, q_Mult, q_Done};
+	assign {Ld7, Ld6, Ld5, Ld4} = {state, ~state, 1'b0, 1'b0};
 	assign {Ld3, Ld2, Ld1, Ld0} = {BtnL, BtnU, BtnR, BtnD}; // Reset is driven by BtnC
 	// Here
 	// BtnL = Start/Ack
@@ -173,10 +197,10 @@ always @(posedge board_clk, posedge Reset)
 	// ****** TODO  in Part 2 ******
 	// assign y = s ? i1 : i0;  // an example of a 2-to-1 mux coding
 	// assign y = s1 ? (s0 ? i3: i2): (s0 ? i1: i0); // an example of a 4-to-1 mux coding
-	assign SSD3 = Ain[7:4];
-	assign SSD3 = Ain[3:0];
-	assign SSD3 = Bin[7:4];
-	assign SSD3 = Bin[3:0];
+	assign SSD3 = {Sw7, Sw6, Sw5, Sw4};
+	assign SSD2 = {Sw3, Sw2, Sw1, Sw0};
+	assign SSD1 = {Sw7, Sw6, Sw5, Sw4};
+	assign SSD0 = {Sw3, Sw2, Sw1, Sw0};
 	assign ssdscan_clk = DIV_CLK[19:18];
 	assign An3	= !(~(ssdscan_clk[1]) && ~(ssdscan_clk[0]));  // when ssdscan_clk = 00
 	assign An2	= !(~(ssdscan_clk[1]) &&  (ssdscan_clk[0]));  // when ssdscan_clk = 01

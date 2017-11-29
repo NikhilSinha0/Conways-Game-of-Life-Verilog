@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.xst" -ofn "C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/ConwayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Conways_top.ucf -uc nexys3.ucf -p xc6slx16-csg324-3 "ConwayVGA.ngc" ConwayVGA.ngd  
