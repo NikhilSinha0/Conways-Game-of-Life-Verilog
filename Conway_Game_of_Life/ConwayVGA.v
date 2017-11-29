@@ -1,10 +1,12 @@
 `timescale 1ns / 1ps
 
-module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1, btnU, btnD,
-	St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar, Mt_St_we_bar,
+module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6, Sw5, Sw4, Sw3, Sw2, Sw1, Sw0, btnU, btnD,
+	btnR, btnC, btnL, St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar, Mt_St_we_bar,
 	An0, An1, An2, An3, Ca, Cb, Cc, Cd, Ce, Cf, Cg, Dp,
 	LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7);
-	input ClkPort, Sw0, btnU, btnD, Sw0, Sw1;
+	input ClkPort;
+	input	btnL, btnU, btnD, btnR, btnC;	
+	input	Sw7, Sw6, Sw5, Sw4, Sw3, Sw2, Sw1, Sw0;
 	output St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar, Mt_St_we_bar;
 	output vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b;
 	output An0, An1, An2, An3, Ca, Cb, Cc, Cd, Ce, Cf, Cg, Dp;
@@ -36,6 +38,8 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire inDisplayArea;
 	wire [9:0] CounterX;
 	wire [9:0] CounterY;
+	reg [64:0] RegArray [0:48];
+	integer i, j;
 
 	hvsync_generator syncgen(.clk(clk), .reset(reset),.vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
 	
@@ -63,6 +67,55 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 		vga_r <= R & inDisplayArea;
 		vga_g <= G & inDisplayArea;
 		vga_b <= B & inDisplayArea;
+	end
+	
+	always @ (posedge clk, posedge reset)
+	begin: Game
+		reg top4, top2, top1, bot4, bot2, bot1, Mux, A, B, C, D, E, F, G, H;
+		if(reset)
+		begin
+			state<=0;
+			for(i = 0; i < 48; i = i + 1)
+			begin
+				for(j = 0; j < 64; j = j + 1)
+				begin
+					if(Sw0 && i > 40)
+						RegArray[i][j]<=1'b1;
+					else
+						RegArray[i][j]<=0;
+				end
+			end
+		end
+		else if(btnC)
+			state<=1'b0;
+		else if(btnR)
+			state<=1'b1;
+		else if(state==1'b1)
+		begin
+			for(i = 0; i < 48; i = i + 1)
+			begin
+				for(j = 0; j < 64; j = j + 1)
+				begin
+					A = (i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					B = (i==0) ? 1'b0 : RegArray[i-1][j];
+					C = (i==0 || j==63) ? 1'b0 : RegArray[i-1][j+1];
+					D = (j==63) ? 1'b0 : RegArray[i][j+1];
+					E = (i==47 || j==63) ? 1'b0 : RegArray[i+1][j+1];
+					F = (i==47) ? 1'b0 : RegArray[i+1][j];
+					G = (i==47 || j==0) ? 1'b0 : RegArray[i+1][j-1];
+					H = (i==0) ? 1'b0 : RegArray[i-1][j];
+					top4 = A&B&C&D;
+					bot4 = E&F&G&H;
+					top2 = A? (B? ~(C|D) : (C^D)) : (B? (C^D) : (C&D));
+					bot2 = E? (F? ~(G|H) : (G^H)) : (F? (G^H) : (G&H));
+					top1 = A^B^C^D;
+					bot1 = E^F^G^H;
+					Mux = top1? (bot1? (~(top2|bot2)&RegArray[i][j]) : (top2^bot2)) : (bot1? (top2^bot2) : ((top2^bot2)&RegArray[i][j]));
+					RegArray[i][j] <= Mux & ~top4 &~bot4;
+					//RegArray[i][j]<=WireArray[i][j];
+				end
+			end
+		end
 	end
 	
 	/////////////////////////////////////////////////////////////////

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: ConwayVGA.prj
 
@@ -117,16 +117,15 @@ Parsing module <ConwayVGA>.
 Elaborating module <ConwayVGA>.
 
 Elaborating module <BUF>.
-WARNING:HDLCompiler:1127 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 32: Assignment to button_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 34: Assignment to button_clk ignored, since the identifier is never used
 
 Elaborating module <hvsync_generator>.
 WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 34: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 44: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 52: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 54: Result of 32-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 80: Net <p2_score[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 81: Net <p1_score[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 82: Net <state[1]> does not have a driver.
+WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 56: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 58: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 133: Net <p2_score[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 134: Net <p1_score[3]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -134,28 +133,35 @@ WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Proj
 
 Synthesizing Unit <ConwayVGA>.
     Related source file is "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v".
+WARNING:Xst:647 - Input <Sw7> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btnL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <p2_score> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <p1_score> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <state> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 2-bit register for signal <state>.
     Found 28-bit register for signal <DIV_CLK>.
     Found 10-bit register for signal <position>.
     Found 1-bit register for signal <vga_r>.
     Found 1-bit register for signal <vga_g>.
-    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 57.
-    Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_0_OUT> created at line 29.
-    Found 10-bit adder for signal <position[9]_GND_1_o_add_4_OUT> created at line 52.
-    Found 11-bit adder for signal <n0083> created at line 57.
-    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_6_OUT<9:0>> created at line 54.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 61.
+    Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_0_OUT> created at line 31.
+    Found 10-bit adder for signal <position[9]_GND_1_o_add_4_OUT> created at line 56.
+    Found 11-bit adder for signal <n0089> created at line 61.
+    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_6_OUT<9:0>> created at line 58.
     Found 16x7-bit Read Only RAM for signal <SSD_CATHODES>
-    Found 32-bit comparator lessequal for signal <n0015> created at line 57
-    Found 11-bit comparator lessequal for signal <n0018> created at line 57
-    Found 10-bit comparator greater for signal <GND_1_o_CounterX[9]_LessThan_16_o> created at line 58
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_17_o> created at line 58
+    Found 32-bit comparator lessequal for signal <n0015> created at line 61
+    Found 11-bit comparator lessequal for signal <n0018> created at line 61
+    Found 10-bit comparator greater for signal <GND_1_o_CounterX[9]_LessThan_16_o> created at line 62
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_17_o> created at line 62
     WARNING:Xst:2404 -  FFs/Latches <vga_b<0:0>> (without init value) have a constant value of 0 in block <ConwayVGA>.
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred  40 D-type flip-flop(s).
+	inferred  42 D-type flip-flop(s).
 	inferred   4 Comparator(s).
 	inferred   4 Multiplexer(s).
 Unit <ConwayVGA> synthesized.
@@ -191,9 +197,10 @@ Macro Statistics
  11-bit adder                                          : 1
  11-bit subtractor                                     : 1
  28-bit adder                                          : 1
-# Registers                                            : 9
+# Registers                                            : 10
  1-bit register                                        : 5
  10-bit register                                       : 3
+ 2-bit register                                        : 1
  28-bit register                                       : 1
 # Comparators                                          : 8
  10-bit comparator greater                             : 6
@@ -208,6 +215,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1710 - FF/Latch <state_1> (without init value) has a constant value of 0 in block <ConwayVGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <state<1:1>> (without init value) have a constant value of 0 in block <ConwayVGA>.
 
 Synthesizing (advanced) Unit <ConwayVGA>.
 The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
@@ -244,8 +253,8 @@ Macro Statistics
  28-bit up counter                                     : 1
 # Accumulators                                         : 1
  10-bit updown accumulator                             : 1
-# Registers                                            : 5
- Flip-Flops                                            : 5
+# Registers                                            : 6
+ Flip-Flops                                            : 6
 # Comparators                                          : 8
  10-bit comparator greater                             : 6
  11-bit comparator lessequal                           : 1
@@ -275,6 +284,7 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ConwayVGA, actual ratio is 1.
 FlipFlop position_2 has been replicated 1 time(s)
+FlipFlop state has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -282,8 +292,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 57
- Flip-Flops                                            : 57
+# Registers                                            : 59
+ Flip-Flops                                            : 59
 
 =========================================================================
 
@@ -306,12 +316,12 @@ Top Level Output File Name         : ConwayVGA.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 250
+# BELS                             : 253
 #      BUF                         : 3
 #      GND                         : 1
-#      INV                         : 6
+#      INV                         : 8
 #      LUT1                        : 39
-#      LUT2                        : 12
+#      LUT2                        : 13
 #      LUT3                        : 17
 #      LUT4                        : 30
 #      LUT5                        : 31
@@ -319,17 +329,18 @@ Primitive and Black Box Usage:
 #      MUXCY                       : 49
 #      VCC                         : 1
 #      XORCY                       : 42
-# FlipFlops/Latches                : 57
+# FlipFlops/Latches                : 59
 #      FD                          : 23
 #      FDC                         : 22
+#      FDCE                        : 2
 #      FDR                         : 2
 #      FDRE                        : 6
 #      FDSE                        : 4
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 34
-#      IBUF                        : 4
+# IO Buffers                       : 36
+#      IBUF                        : 6
 #      OBUF                        : 30
 
 Device utilization summary:
@@ -339,20 +350,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              57  out of  18224     0%  
- Number of Slice LUTs:                  154  out of   9112     1%  
-    Number used as Logic:               154  out of   9112     1%  
+ Number of Slice Registers:              58  out of  18224     0%  
+ Number of Slice LUTs:                  157  out of   9112     1%  
+    Number used as Logic:               157  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    155
-   Number with an unused Flip Flop:      98  out of    155    63%  
-   Number with an unused LUT:             1  out of    155     0%  
-   Number of fully used LUT-FF pairs:    56  out of    155    36%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    158
+   Number with an unused Flip Flop:     100  out of    158    63%  
+   Number with an unused LUT:             1  out of    158     0%  
+   Number of fully used LUT-FF pairs:    57  out of    158    36%  
+   Number of unique control sets:         6
 
 IO Utilization: 
- Number of IOs:                          35
- Number of bonded IOBs:                  35  out of    232    15%  
+ Number of IOs:                          44
+ Number of bonded IOBs:                  37  out of    232    15%  
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -378,7 +390,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-DIV_CLK_1                          | BUFG                   | 25    |
+DIV_CLK_1                          | BUFG                   | 27    |
 ClkPort                            | BUFGP                  | 22    |
 DIV_CLK_21                         | NONE(position_3)       | 10    |
 -----------------------------------+------------------------+-------+
@@ -393,9 +405,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.773ns (Maximum Frequency: 265.073MHz)
-   Minimum input arrival time before clock: 5.577ns
+   Minimum input arrival time before clock: 5.605ns
    Maximum output required time after clock: 5.298ns
-   Maximum combinational path delay: 6.416ns
+   Maximum combinational path delay: 6.444ns
 
 Timing Details:
 ---------------
@@ -494,10 +506,32 @@ Delay:               3.601ns (Levels of Logic = 3)
                                        (32.3% logic, 67.7% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
+  Total number of paths / destination ports: 29 / 27
+-------------------------------------------------------------------------
+Offset:              5.605ns (Levels of Logic = 4)
+  Source:            Sw0 (PAD)
+  Destination:       syncgen/CounterY_0 (FF)
+  Destination Clock: DIV_CLK_1 rising
+
+  Data Path: Sw0 to syncgen/CounterY_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
+     BUF:I->O             47   0.568   1.869  BUF2 (LD4_OBUF)
+     LUT6:I0->O           10   0.203   0.857  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
+     LUT5:I4->O            1   0.205   0.000  syncgen/CounterY_0_rstpot (syncgen/CounterY_0_rstpot)
+     FD:D                      0.102          syncgen/CounterY_0
+    ----------------------------------------
+    Total                      5.605ns (2.300ns logic, 3.305ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
   Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
-Offset:              4.275ns (Levels of Logic = 2)
+Offset:              4.303ns (Levels of Logic = 2)
   Source:            Sw0 (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -507,11 +541,11 @@ Offset:              4.275ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O             45   0.568   1.476  BUF2 (LD4_OBUF)
+     BUF:I->O             47   0.568   1.504  BUF2 (LD4_OBUF)
      FDC:CLR                   0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.275ns (2.220ns logic, 2.055ns route)
-                                       (51.9% logic, 48.1% route)
+    Total                      4.303ns (2.220ns logic, 2.083ns route)
+                                       (51.6% logic, 48.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_21'
@@ -536,30 +570,8 @@ Offset:              4.594ns (Levels of Logic = 4)
                                        (42.2% logic, 57.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 21 / 21
--------------------------------------------------------------------------
-Offset:              5.577ns (Levels of Logic = 4)
-  Source:            Sw0 (PAD)
-  Destination:       syncgen/CounterY_0 (FF)
-  Destination Clock: DIV_CLK_1 rising
-
-  Data Path: Sw0 to syncgen/CounterY_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O             45   0.568   1.841  BUF2 (LD4_OBUF)
-     LUT6:I0->O           10   0.203   0.857  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
-     LUT5:I4->O            1   0.205   0.000  syncgen/CounterY_0_rstpot (syncgen/CounterY_0_rstpot)
-     FD:D                      0.102          syncgen/CounterY_0
-    ----------------------------------------
-    Total                      5.577ns (2.300ns logic, 3.277ns route)
-                                       (41.2% logic, 58.8% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
 Offset:              4.382ns (Levels of Logic = 2)
   Source:            syncgen/vga_HS (FF)
@@ -621,7 +633,7 @@ Offset:              5.298ns (Levels of Logic = 2)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               6.416ns (Levels of Logic = 3)
+Delay:               6.444ns (Levels of Logic = 3)
   Source:            Sw0 (PAD)
   Destination:       LD4 (PAD)
 
@@ -630,11 +642,11 @@ Delay:               6.416ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O             45   0.568   1.476  BUF2 (LD4_OBUF)
+     BUF:I->O             47   0.568   1.504  BUF2 (LD4_OBUF)
      OBUF:I->O                 2.571          LD4_OBUF (LD4)
     ----------------------------------------
-    Total                      6.416ns (4.361ns logic, 2.055ns route)
-                                       (68.0% logic, 32.0% route)
+    Total                      6.444ns (4.361ns logic, 2.083ns route)
+                                       (67.7% logic, 32.3% route)
 
 =========================================================================
 
@@ -669,14 +681,14 @@ DIV_CLK_21     |    3.601|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.95 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.97 secs
  
 --> 
 
-Total memory usage is 282396 kilobytes
+Total memory usage is 379548 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   20 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 
