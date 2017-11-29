@@ -112,7 +112,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1511918579" xil_pn:in_ck="5583670322980245318" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1804045462054256834" xil_pn:start_ts="1511918568">
+    <transform xil_pn:end_ts="1511922536" xil_pn:in_ck="5583670322980245318" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1804045462054256834" xil_pn:start_ts="1511922525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -134,7 +134,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1511918586" xil_pn:in_ck="2910811986926382571" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1128510198969811156" xil_pn:start_ts="1511918579">
+    <transform xil_pn:end_ts="1511922543" xil_pn:in_ck="2910811986926382571" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1128510198969811156" xil_pn:start_ts="1511922536">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ConwayVGA.bld"/>
@@ -143,7 +143,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1511918606" xil_pn:in_ck="2912343565911647020" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1511918586">
+    <transform xil_pn:end_ts="1511922552" xil_pn:in_ck="2912343565911647020" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1511922543">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ConwayVGA.pcf"/>
@@ -156,7 +156,7 @@
       <outfile xil_pn:name="ConwayVGA_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1511918622" xil_pn:in_ck="-2824016163007790971" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1511918606">
+    <transform xil_pn:end_ts="1511922567" xil_pn:in_ck="-2824016163007790971" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1511922552">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -171,7 +171,7 @@
       <outfile xil_pn:name="ConwayVGA_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1511918634" xil_pn:in_ck="6852445230030570130" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1511918622">
+    <transform xil_pn:end_ts="1511922580" xil_pn:in_ck="6852445230030570130" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1511922567">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ConwayVGA.ut"/>
@@ -183,7 +183,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1511918622" xil_pn:in_ck="2710175139856739752" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1511918616">
+    <transform xil_pn:end_ts="1511922567" xil_pn:in_ck="2710175139856739752" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1511922561">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ConwayVGA.twr"/>

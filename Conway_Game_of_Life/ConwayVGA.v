@@ -19,7 +19,7 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	wire	reset, start, ClkPort, board_clk, clk, button_clk;
 	
 	BUF BUF1 (board_clk, ClkPort); 	
-	BUF BUF2 (reset, Sw0);
+	BUF BUF2 (reset, btnC);
 	BUF BUF3 (start, Sw1);
 	
 	reg [27:0]	DIV_CLK;
@@ -69,7 +69,7 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 		vga_b <= B & inDisplayArea;
 	end
 	
-	always @ (posedge clk, posedge reset)
+	always @ (posedge DIV_CLK[21], posedge reset)
 	begin: Game
 		reg top4, top2, top1, bot4, bot2, bot1, Mux, A, B, C, D, E, F, G, H;
 		if(reset)
@@ -79,14 +79,15 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 			begin
 				for(j = 0; j < 64; j = j + 1)
 				begin
-					if(Sw0 && i > 40)
+					if((Sw0 && i > 36 && j > 32)||(Sw1 && i > 36 && j < 32)||(Sw2 && i < 36 && i > 24 && j > 32)||(Sw3 && i > 24 && i < 36 && j < 32)||
+					(Sw4 && i > 12 && i < 23 && j < 32)||(Sw5 && i > 12 && i < 23 && j > 32)||(Sw6 && i < 12 && j > 32)||(Sw7 && i < 12 && j > 32))
 						RegArray[i][j]<=1'b1;
 					else
 						RegArray[i][j]<=0;
 				end
 			end
 		end
-		else if(btnC)
+		else if(btnL)
 			state<=1'b0;
 		else if(btnR)
 			state<=1'b1;

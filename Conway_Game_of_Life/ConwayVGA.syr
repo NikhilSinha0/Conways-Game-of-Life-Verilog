@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: ConwayVGA.prj
 
@@ -124,8 +124,8 @@ WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Proj
 WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 44: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 56: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 58: Result of 32-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 133: Net <p2_score[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 134: Net <p1_score[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 134: Net <p2_score[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 135: Net <p1_score[3]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -139,7 +139,7 @@ WARNING:Xst:647 - Input <Sw5> is never used. This port will be preserved and lef
 WARNING:Xst:647 - Input <Sw4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Sw3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Sw2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <btnL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <p2_score> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <p1_score> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 2-bit register for signal <state>.
@@ -219,8 +219,8 @@ WARNING:Xst:1710 - FF/Latch <state_1> (without init value) has a constant value 
 WARNING:Xst:2404 -  FFs/Latches <state<1:1>> (without init value) have a constant value of 0 in block <ConwayVGA>.
 
 Synthesizing (advanced) Unit <ConwayVGA>.
-The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
 The following registers are absorbed into accumulator <position>: 1 register on signal <position>.
+The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -390,9 +390,9 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-DIV_CLK_1                          | BUFG                   | 27    |
+DIV_CLK_1                          | BUFG                   | 25    |
+DIV_CLK_21                         | NONE(state)            | 12    |
 ClkPort                            | BUFGP                  | 22    |
-DIV_CLK_21                         | NONE(position_3)       | 10    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -506,50 +506,8 @@ Delay:               3.601ns (Levels of Logic = 3)
                                        (32.3% logic, 67.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 29 / 27
--------------------------------------------------------------------------
-Offset:              5.605ns (Levels of Logic = 4)
-  Source:            Sw0 (PAD)
-  Destination:       syncgen/CounterY_0 (FF)
-  Destination Clock: DIV_CLK_1 rising
-
-  Data Path: Sw0 to syncgen/CounterY_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O             47   0.568   1.869  BUF2 (LD4_OBUF)
-     LUT6:I0->O           10   0.203   0.857  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
-     LUT5:I4->O            1   0.205   0.000  syncgen/CounterY_0_rstpot (syncgen/CounterY_0_rstpot)
-     FD:D                      0.102          syncgen/CounterY_0
-    ----------------------------------------
-    Total                      5.605ns (2.300ns logic, 3.305ns route)
-                                       (41.0% logic, 59.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
-  Total number of paths / destination ports: 22 / 22
--------------------------------------------------------------------------
-Offset:              4.303ns (Levels of Logic = 2)
-  Source:            Sw0 (PAD)
-  Destination:       DIV_CLK_0 (FF)
-  Destination Clock: ClkPort rising
-
-  Data Path: Sw0 to DIV_CLK_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O             47   0.568   1.504  BUF2 (LD4_OBUF)
-     FDC:CLR                   0.430          DIV_CLK_0
-    ----------------------------------------
-    Total                      4.303ns (2.220ns logic, 2.083ns route)
-                                       (51.6% logic, 48.4% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_21'
-  Total number of paths / destination ports: 82 / 29
+  Total number of paths / destination ports: 90 / 35
 -------------------------------------------------------------------------
 Offset:              4.594ns (Levels of Logic = 4)
   Source:            btnD (PAD)
@@ -570,8 +528,50 @@ Offset:              4.594ns (Levels of Logic = 4)
                                        (42.2% logic, 57.8% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.303ns (Levels of Logic = 2)
+  Source:            btnC (PAD)
+  Destination:       DIV_CLK_0 (FF)
+  Destination Clock: ClkPort rising
+
+  Data Path: btnC to DIV_CLK_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O             47   0.568   1.504  BUF2 (LD4_OBUF)
+     FDC:CLR                   0.430          DIV_CLK_0
+    ----------------------------------------
+    Total                      4.303ns (2.220ns logic, 2.083ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              5.605ns (Levels of Logic = 4)
+  Source:            btnC (PAD)
+  Destination:       syncgen/CounterY_0 (FF)
+  Destination Clock: DIV_CLK_1 rising
+
+  Data Path: btnC to syncgen/CounterY_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O             47   0.568   1.869  BUF2 (LD4_OBUF)
+     LUT6:I0->O           10   0.203   0.857  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
+     LUT5:I4->O            1   0.205   0.000  syncgen/CounterY_0_rstpot (syncgen/CounterY_0_rstpot)
+     FD:D                      0.102          syncgen/CounterY_0
+    ----------------------------------------
+    Total                      5.605ns (2.300ns logic, 3.305ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 6 / 6
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              4.382ns (Levels of Logic = 2)
   Source:            syncgen/vga_HS (FF)
@@ -611,7 +611,7 @@ Offset:              5.001ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_21'
-  Total number of paths / destination ports: 21 / 7
+  Total number of paths / destination ports: 23 / 9
 -------------------------------------------------------------------------
 Offset:              5.298ns (Levels of Logic = 2)
   Source:            position_1 (FF)
@@ -634,14 +634,14 @@ Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Delay:               6.444ns (Levels of Logic = 3)
-  Source:            Sw0 (PAD)
+  Source:            btnC (PAD)
   Destination:       LD4 (PAD)
 
-  Data Path: Sw0 to LD4
+  Data Path: btnC to LD4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
      BUF:I->O             47   0.568   1.504  BUF2 (LD4_OBUF)
      OBUF:I->O                 2.571          LD4_OBUF (LD4)
     ----------------------------------------
@@ -681,8 +681,8 @@ DIV_CLK_21     |    3.601|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.97 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.58 secs
  
 --> 
 

@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 28 17:23:08 2017
+Mapped Date    : Tue Nov 28 18:29:04 2017
 
 Design Summary
 --------------
@@ -35,12 +35,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    52 out of   2,278    2%
+  Number of occupied Slices:                    55 out of   2,278    2%
   Number of MUXCYs used:                        64 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          126
-    Number with an unused Flip Flop:            69 out of     126   54%
-    Number with an unused LUT:                   2 out of     126    1%
-    Number of fully used LUT-FF pairs:          55 out of     126   43%
+  Number of LUT Flip Flop pairs used:          125
+    Number with an unused Flip Flop:            68 out of     125   54%
+    Number with an unused LUT:                   1 out of     125    1%
+    Number of fully used LUT-FF pairs:          56 out of     125   44%
     Number of unique control sets:               6
     Number of slice register sites lost
       to control set restrictions:              30 out of  18,224    1%
@@ -52,8 +52,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        43 out of     232   18%
-    Number of LOCed IOBs:                       43 out of      43  100%
+  Number of bonded IOBs:                        44 out of     232   18%
+    Number of LOCed IOBs:                       43 out of      44   97%
     IOB Flip Flops:                              1
 
 Specific Feature Utilization:
@@ -83,10 +83,10 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.91
+Average Fanout of Non-Clock Nets:                2.89
 
-Peak Memory Usage:  405 MB
-Total REAL time to MAP completion:  15 secs 
+Peak Memory Usage:  407 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   6 secs 
 
 Table of Contents
@@ -113,14 +113,14 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network btnL has no load.
+INFO:LIT:243 - Logical network Sw7_IBUF has no load.
 INFO:LIT:395 - The above info message is repeated 6 more times for the following
    (max. 5 shown):
-   Sw7_IBUF,
    Sw6_IBUF,
    Sw5_IBUF,
    Sw4_IBUF,
-   Sw3_IBUF
+   Sw3_IBUF,
+   Sw2_IBUF
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -132,6 +132,9 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 44 IOs, 43 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -190,8 +193,9 @@ Section 6 - IOB Properties
 | Sw5                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | Sw6                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | Sw7                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| btnC                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| btnC                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | btnD                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btnL                               | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
 | btnR                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | btnU                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | vga_b                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
