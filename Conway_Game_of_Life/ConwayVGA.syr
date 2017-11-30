@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.77 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.77 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Reading design: ConwayVGA.prj
 
@@ -105,9 +105,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" into library work
+Analyzing Verilog file "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" into library work
 Parsing module <hvsync_generator>.
-Analyzing Verilog file "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" into library work
+Analyzing Verilog file "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" into library work
 Parsing module <ConwayVGA>.
 
 =========================================================================
@@ -117,61 +117,861 @@ Parsing module <ConwayVGA>.
 Elaborating module <ConwayVGA>.
 
 Elaborating module <BUF>.
-WARNING:HDLCompiler:1127 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 23: Assignment to start ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 34: Assignment to button_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 23: Assignment to start ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 34: Assignment to button_clk ignored, since the identifier is never used
 
 Elaborating module <hvsync_generator>.
-WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 34: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 44: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 57: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 59: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 42: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 44: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 59: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v" Line 61: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 60: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v" Line 62: Result of 32-bit expression is truncated to fit in 10-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <ConwayVGA>.
-    Related source file is "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v".
+    Related source file is "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.v".
+    Register <vga_b> equivalent to <vga_r> has been removed
+    Register <vga_g> equivalent to <vga_r> has been removed
     Found 28-bit register for signal <DIV_CLK>.
-    Found 1-bit register for signal <LD7>.
-    Found 10-bit register for signal <position>.
+    Found 1-bit register for signal <Ld7>.
     Found 1-bit register for signal <vga_r>.
-    Found 1-bit register for signal <vga_g>.
-    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 62.
+    Found 1-bit register for signal <RegArray_0<767>>.
+    Found 1-bit register for signal <RegArray_0<766>>.
+    Found 1-bit register for signal <RegArray_0<765>>.
+    Found 1-bit register for signal <RegArray_0<764>>.
+    Found 1-bit register for signal <RegArray_0<763>>.
+    Found 1-bit register for signal <RegArray_0<762>>.
+    Found 1-bit register for signal <RegArray_0<761>>.
+    Found 1-bit register for signal <RegArray_0<760>>.
+    Found 1-bit register for signal <RegArray_0<759>>.
+    Found 1-bit register for signal <RegArray_0<758>>.
+    Found 1-bit register for signal <RegArray_0<757>>.
+    Found 1-bit register for signal <RegArray_0<756>>.
+    Found 1-bit register for signal <RegArray_0<755>>.
+    Found 1-bit register for signal <RegArray_0<754>>.
+    Found 1-bit register for signal <RegArray_0<753>>.
+    Found 1-bit register for signal <RegArray_0<752>>.
+    Found 1-bit register for signal <RegArray_0<751>>.
+    Found 1-bit register for signal <RegArray_0<750>>.
+    Found 1-bit register for signal <RegArray_0<749>>.
+    Found 1-bit register for signal <RegArray_0<748>>.
+    Found 1-bit register for signal <RegArray_0<747>>.
+    Found 1-bit register for signal <RegArray_0<746>>.
+    Found 1-bit register for signal <RegArray_0<745>>.
+    Found 1-bit register for signal <RegArray_0<744>>.
+    Found 1-bit register for signal <RegArray_0<743>>.
+    Found 1-bit register for signal <RegArray_0<742>>.
+    Found 1-bit register for signal <RegArray_0<741>>.
+    Found 1-bit register for signal <RegArray_0<740>>.
+    Found 1-bit register for signal <RegArray_0<739>>.
+    Found 1-bit register for signal <RegArray_0<738>>.
+    Found 1-bit register for signal <RegArray_0<737>>.
+    Found 1-bit register for signal <RegArray_0<736>>.
+    Found 1-bit register for signal <RegArray_0<735>>.
+    Found 1-bit register for signal <RegArray_0<734>>.
+    Found 1-bit register for signal <RegArray_0<733>>.
+    Found 1-bit register for signal <RegArray_0<732>>.
+    Found 1-bit register for signal <RegArray_0<731>>.
+    Found 1-bit register for signal <RegArray_0<730>>.
+    Found 1-bit register for signal <RegArray_0<729>>.
+    Found 1-bit register for signal <RegArray_0<728>>.
+    Found 1-bit register for signal <RegArray_0<727>>.
+    Found 1-bit register for signal <RegArray_0<726>>.
+    Found 1-bit register for signal <RegArray_0<725>>.
+    Found 1-bit register for signal <RegArray_0<724>>.
+    Found 1-bit register for signal <RegArray_0<723>>.
+    Found 1-bit register for signal <RegArray_0<722>>.
+    Found 1-bit register for signal <RegArray_0<721>>.
+    Found 1-bit register for signal <RegArray_0<720>>.
+    Found 1-bit register for signal <RegArray_0<719>>.
+    Found 1-bit register for signal <RegArray_0<718>>.
+    Found 1-bit register for signal <RegArray_0<717>>.
+    Found 1-bit register for signal <RegArray_0<716>>.
+    Found 1-bit register for signal <RegArray_0<715>>.
+    Found 1-bit register for signal <RegArray_0<714>>.
+    Found 1-bit register for signal <RegArray_0<713>>.
+    Found 1-bit register for signal <RegArray_0<712>>.
+    Found 1-bit register for signal <RegArray_0<711>>.
+    Found 1-bit register for signal <RegArray_0<710>>.
+    Found 1-bit register for signal <RegArray_0<709>>.
+    Found 1-bit register for signal <RegArray_0<708>>.
+    Found 1-bit register for signal <RegArray_0<707>>.
+    Found 1-bit register for signal <RegArray_0<706>>.
+    Found 1-bit register for signal <RegArray_0<705>>.
+    Found 1-bit register for signal <RegArray_0<704>>.
+    Found 1-bit register for signal <RegArray_0<703>>.
+    Found 1-bit register for signal <RegArray_0<702>>.
+    Found 1-bit register for signal <RegArray_0<701>>.
+    Found 1-bit register for signal <RegArray_0<700>>.
+    Found 1-bit register for signal <RegArray_0<699>>.
+    Found 1-bit register for signal <RegArray_0<698>>.
+    Found 1-bit register for signal <RegArray_0<697>>.
+    Found 1-bit register for signal <RegArray_0<696>>.
+    Found 1-bit register for signal <RegArray_0<695>>.
+    Found 1-bit register for signal <RegArray_0<694>>.
+    Found 1-bit register for signal <RegArray_0<693>>.
+    Found 1-bit register for signal <RegArray_0<692>>.
+    Found 1-bit register for signal <RegArray_0<691>>.
+    Found 1-bit register for signal <RegArray_0<690>>.
+    Found 1-bit register for signal <RegArray_0<689>>.
+    Found 1-bit register for signal <RegArray_0<688>>.
+    Found 1-bit register for signal <RegArray_0<687>>.
+    Found 1-bit register for signal <RegArray_0<686>>.
+    Found 1-bit register for signal <RegArray_0<685>>.
+    Found 1-bit register for signal <RegArray_0<684>>.
+    Found 1-bit register for signal <RegArray_0<683>>.
+    Found 1-bit register for signal <RegArray_0<682>>.
+    Found 1-bit register for signal <RegArray_0<681>>.
+    Found 1-bit register for signal <RegArray_0<680>>.
+    Found 1-bit register for signal <RegArray_0<679>>.
+    Found 1-bit register for signal <RegArray_0<678>>.
+    Found 1-bit register for signal <RegArray_0<677>>.
+    Found 1-bit register for signal <RegArray_0<676>>.
+    Found 1-bit register for signal <RegArray_0<675>>.
+    Found 1-bit register for signal <RegArray_0<674>>.
+    Found 1-bit register for signal <RegArray_0<673>>.
+    Found 1-bit register for signal <RegArray_0<672>>.
+    Found 1-bit register for signal <RegArray_0<671>>.
+    Found 1-bit register for signal <RegArray_0<670>>.
+    Found 1-bit register for signal <RegArray_0<669>>.
+    Found 1-bit register for signal <RegArray_0<668>>.
+    Found 1-bit register for signal <RegArray_0<667>>.
+    Found 1-bit register for signal <RegArray_0<666>>.
+    Found 1-bit register for signal <RegArray_0<665>>.
+    Found 1-bit register for signal <RegArray_0<664>>.
+    Found 1-bit register for signal <RegArray_0<663>>.
+    Found 1-bit register for signal <RegArray_0<662>>.
+    Found 1-bit register for signal <RegArray_0<661>>.
+    Found 1-bit register for signal <RegArray_0<660>>.
+    Found 1-bit register for signal <RegArray_0<659>>.
+    Found 1-bit register for signal <RegArray_0<658>>.
+    Found 1-bit register for signal <RegArray_0<657>>.
+    Found 1-bit register for signal <RegArray_0<656>>.
+    Found 1-bit register for signal <RegArray_0<655>>.
+    Found 1-bit register for signal <RegArray_0<654>>.
+    Found 1-bit register for signal <RegArray_0<653>>.
+    Found 1-bit register for signal <RegArray_0<652>>.
+    Found 1-bit register for signal <RegArray_0<651>>.
+    Found 1-bit register for signal <RegArray_0<650>>.
+    Found 1-bit register for signal <RegArray_0<649>>.
+    Found 1-bit register for signal <RegArray_0<648>>.
+    Found 1-bit register for signal <RegArray_0<647>>.
+    Found 1-bit register for signal <RegArray_0<646>>.
+    Found 1-bit register for signal <RegArray_0<645>>.
+    Found 1-bit register for signal <RegArray_0<644>>.
+    Found 1-bit register for signal <RegArray_0<643>>.
+    Found 1-bit register for signal <RegArray_0<642>>.
+    Found 1-bit register for signal <RegArray_0<641>>.
+    Found 1-bit register for signal <RegArray_0<640>>.
+    Found 1-bit register for signal <RegArray_0<639>>.
+    Found 1-bit register for signal <RegArray_0<638>>.
+    Found 1-bit register for signal <RegArray_0<637>>.
+    Found 1-bit register for signal <RegArray_0<636>>.
+    Found 1-bit register for signal <RegArray_0<635>>.
+    Found 1-bit register for signal <RegArray_0<634>>.
+    Found 1-bit register for signal <RegArray_0<633>>.
+    Found 1-bit register for signal <RegArray_0<632>>.
+    Found 1-bit register for signal <RegArray_0<631>>.
+    Found 1-bit register for signal <RegArray_0<630>>.
+    Found 1-bit register for signal <RegArray_0<629>>.
+    Found 1-bit register for signal <RegArray_0<628>>.
+    Found 1-bit register for signal <RegArray_0<627>>.
+    Found 1-bit register for signal <RegArray_0<626>>.
+    Found 1-bit register for signal <RegArray_0<625>>.
+    Found 1-bit register for signal <RegArray_0<624>>.
+    Found 1-bit register for signal <RegArray_0<623>>.
+    Found 1-bit register for signal <RegArray_0<622>>.
+    Found 1-bit register for signal <RegArray_0<621>>.
+    Found 1-bit register for signal <RegArray_0<620>>.
+    Found 1-bit register for signal <RegArray_0<619>>.
+    Found 1-bit register for signal <RegArray_0<618>>.
+    Found 1-bit register for signal <RegArray_0<617>>.
+    Found 1-bit register for signal <RegArray_0<616>>.
+    Found 1-bit register for signal <RegArray_0<615>>.
+    Found 1-bit register for signal <RegArray_0<614>>.
+    Found 1-bit register for signal <RegArray_0<613>>.
+    Found 1-bit register for signal <RegArray_0<612>>.
+    Found 1-bit register for signal <RegArray_0<611>>.
+    Found 1-bit register for signal <RegArray_0<610>>.
+    Found 1-bit register for signal <RegArray_0<609>>.
+    Found 1-bit register for signal <RegArray_0<608>>.
+    Found 1-bit register for signal <RegArray_0<607>>.
+    Found 1-bit register for signal <RegArray_0<606>>.
+    Found 1-bit register for signal <RegArray_0<605>>.
+    Found 1-bit register for signal <RegArray_0<604>>.
+    Found 1-bit register for signal <RegArray_0<603>>.
+    Found 1-bit register for signal <RegArray_0<602>>.
+    Found 1-bit register for signal <RegArray_0<601>>.
+    Found 1-bit register for signal <RegArray_0<600>>.
+    Found 1-bit register for signal <RegArray_0<599>>.
+    Found 1-bit register for signal <RegArray_0<598>>.
+    Found 1-bit register for signal <RegArray_0<597>>.
+    Found 1-bit register for signal <RegArray_0<596>>.
+    Found 1-bit register for signal <RegArray_0<595>>.
+    Found 1-bit register for signal <RegArray_0<594>>.
+    Found 1-bit register for signal <RegArray_0<593>>.
+    Found 1-bit register for signal <RegArray_0<592>>.
+    Found 1-bit register for signal <RegArray_0<591>>.
+    Found 1-bit register for signal <RegArray_0<590>>.
+    Found 1-bit register for signal <RegArray_0<589>>.
+    Found 1-bit register for signal <RegArray_0<588>>.
+    Found 1-bit register for signal <RegArray_0<587>>.
+    Found 1-bit register for signal <RegArray_0<586>>.
+    Found 1-bit register for signal <RegArray_0<585>>.
+    Found 1-bit register for signal <RegArray_0<584>>.
+    Found 1-bit register for signal <RegArray_0<583>>.
+    Found 1-bit register for signal <RegArray_0<582>>.
+    Found 1-bit register for signal <RegArray_0<581>>.
+    Found 1-bit register for signal <RegArray_0<580>>.
+    Found 1-bit register for signal <RegArray_0<579>>.
+    Found 1-bit register for signal <RegArray_0<578>>.
+    Found 1-bit register for signal <RegArray_0<577>>.
+    Found 1-bit register for signal <RegArray_0<576>>.
+    Found 1-bit register for signal <RegArray_0<575>>.
+    Found 1-bit register for signal <RegArray_0<574>>.
+    Found 1-bit register for signal <RegArray_0<573>>.
+    Found 1-bit register for signal <RegArray_0<572>>.
+    Found 1-bit register for signal <RegArray_0<571>>.
+    Found 1-bit register for signal <RegArray_0<570>>.
+    Found 1-bit register for signal <RegArray_0<569>>.
+    Found 1-bit register for signal <RegArray_0<568>>.
+    Found 1-bit register for signal <RegArray_0<567>>.
+    Found 1-bit register for signal <RegArray_0<566>>.
+    Found 1-bit register for signal <RegArray_0<565>>.
+    Found 1-bit register for signal <RegArray_0<564>>.
+    Found 1-bit register for signal <RegArray_0<563>>.
+    Found 1-bit register for signal <RegArray_0<562>>.
+    Found 1-bit register for signal <RegArray_0<561>>.
+    Found 1-bit register for signal <RegArray_0<560>>.
+    Found 1-bit register for signal <RegArray_0<559>>.
+    Found 1-bit register for signal <RegArray_0<558>>.
+    Found 1-bit register for signal <RegArray_0<557>>.
+    Found 1-bit register for signal <RegArray_0<556>>.
+    Found 1-bit register for signal <RegArray_0<555>>.
+    Found 1-bit register for signal <RegArray_0<554>>.
+    Found 1-bit register for signal <RegArray_0<553>>.
+    Found 1-bit register for signal <RegArray_0<552>>.
+    Found 1-bit register for signal <RegArray_0<551>>.
+    Found 1-bit register for signal <RegArray_0<550>>.
+    Found 1-bit register for signal <RegArray_0<549>>.
+    Found 1-bit register for signal <RegArray_0<548>>.
+    Found 1-bit register for signal <RegArray_0<547>>.
+    Found 1-bit register for signal <RegArray_0<546>>.
+    Found 1-bit register for signal <RegArray_0<545>>.
+    Found 1-bit register for signal <RegArray_0<544>>.
+    Found 1-bit register for signal <RegArray_0<543>>.
+    Found 1-bit register for signal <RegArray_0<542>>.
+    Found 1-bit register for signal <RegArray_0<541>>.
+    Found 1-bit register for signal <RegArray_0<540>>.
+    Found 1-bit register for signal <RegArray_0<539>>.
+    Found 1-bit register for signal <RegArray_0<538>>.
+    Found 1-bit register for signal <RegArray_0<537>>.
+    Found 1-bit register for signal <RegArray_0<536>>.
+    Found 1-bit register for signal <RegArray_0<535>>.
+    Found 1-bit register for signal <RegArray_0<534>>.
+    Found 1-bit register for signal <RegArray_0<533>>.
+    Found 1-bit register for signal <RegArray_0<532>>.
+    Found 1-bit register for signal <RegArray_0<531>>.
+    Found 1-bit register for signal <RegArray_0<530>>.
+    Found 1-bit register for signal <RegArray_0<529>>.
+    Found 1-bit register for signal <RegArray_0<528>>.
+    Found 1-bit register for signal <RegArray_0<527>>.
+    Found 1-bit register for signal <RegArray_0<526>>.
+    Found 1-bit register for signal <RegArray_0<525>>.
+    Found 1-bit register for signal <RegArray_0<524>>.
+    Found 1-bit register for signal <RegArray_0<523>>.
+    Found 1-bit register for signal <RegArray_0<522>>.
+    Found 1-bit register for signal <RegArray_0<521>>.
+    Found 1-bit register for signal <RegArray_0<520>>.
+    Found 1-bit register for signal <RegArray_0<519>>.
+    Found 1-bit register for signal <RegArray_0<518>>.
+    Found 1-bit register for signal <RegArray_0<517>>.
+    Found 1-bit register for signal <RegArray_0<516>>.
+    Found 1-bit register for signal <RegArray_0<515>>.
+    Found 1-bit register for signal <RegArray_0<514>>.
+    Found 1-bit register for signal <RegArray_0<513>>.
+    Found 1-bit register for signal <RegArray_0<512>>.
+    Found 1-bit register for signal <RegArray_0<511>>.
+    Found 1-bit register for signal <RegArray_0<510>>.
+    Found 1-bit register for signal <RegArray_0<509>>.
+    Found 1-bit register for signal <RegArray_0<508>>.
+    Found 1-bit register for signal <RegArray_0<507>>.
+    Found 1-bit register for signal <RegArray_0<506>>.
+    Found 1-bit register for signal <RegArray_0<505>>.
+    Found 1-bit register for signal <RegArray_0<504>>.
+    Found 1-bit register for signal <RegArray_0<503>>.
+    Found 1-bit register for signal <RegArray_0<502>>.
+    Found 1-bit register for signal <RegArray_0<501>>.
+    Found 1-bit register for signal <RegArray_0<500>>.
+    Found 1-bit register for signal <RegArray_0<499>>.
+    Found 1-bit register for signal <RegArray_0<498>>.
+    Found 1-bit register for signal <RegArray_0<497>>.
+    Found 1-bit register for signal <RegArray_0<496>>.
+    Found 1-bit register for signal <RegArray_0<495>>.
+    Found 1-bit register for signal <RegArray_0<494>>.
+    Found 1-bit register for signal <RegArray_0<493>>.
+    Found 1-bit register for signal <RegArray_0<492>>.
+    Found 1-bit register for signal <RegArray_0<491>>.
+    Found 1-bit register for signal <RegArray_0<490>>.
+    Found 1-bit register for signal <RegArray_0<489>>.
+    Found 1-bit register for signal <RegArray_0<488>>.
+    Found 1-bit register for signal <RegArray_0<487>>.
+    Found 1-bit register for signal <RegArray_0<486>>.
+    Found 1-bit register for signal <RegArray_0<485>>.
+    Found 1-bit register for signal <RegArray_0<484>>.
+    Found 1-bit register for signal <RegArray_0<483>>.
+    Found 1-bit register for signal <RegArray_0<482>>.
+    Found 1-bit register for signal <RegArray_0<481>>.
+    Found 1-bit register for signal <RegArray_0<480>>.
+    Found 1-bit register for signal <RegArray_0<479>>.
+    Found 1-bit register for signal <RegArray_0<478>>.
+    Found 1-bit register for signal <RegArray_0<477>>.
+    Found 1-bit register for signal <RegArray_0<476>>.
+    Found 1-bit register for signal <RegArray_0<475>>.
+    Found 1-bit register for signal <RegArray_0<474>>.
+    Found 1-bit register for signal <RegArray_0<473>>.
+    Found 1-bit register for signal <RegArray_0<472>>.
+    Found 1-bit register for signal <RegArray_0<471>>.
+    Found 1-bit register for signal <RegArray_0<470>>.
+    Found 1-bit register for signal <RegArray_0<469>>.
+    Found 1-bit register for signal <RegArray_0<468>>.
+    Found 1-bit register for signal <RegArray_0<467>>.
+    Found 1-bit register for signal <RegArray_0<466>>.
+    Found 1-bit register for signal <RegArray_0<465>>.
+    Found 1-bit register for signal <RegArray_0<464>>.
+    Found 1-bit register for signal <RegArray_0<463>>.
+    Found 1-bit register for signal <RegArray_0<462>>.
+    Found 1-bit register for signal <RegArray_0<461>>.
+    Found 1-bit register for signal <RegArray_0<460>>.
+    Found 1-bit register for signal <RegArray_0<459>>.
+    Found 1-bit register for signal <RegArray_0<458>>.
+    Found 1-bit register for signal <RegArray_0<457>>.
+    Found 1-bit register for signal <RegArray_0<456>>.
+    Found 1-bit register for signal <RegArray_0<455>>.
+    Found 1-bit register for signal <RegArray_0<454>>.
+    Found 1-bit register for signal <RegArray_0<453>>.
+    Found 1-bit register for signal <RegArray_0<452>>.
+    Found 1-bit register for signal <RegArray_0<451>>.
+    Found 1-bit register for signal <RegArray_0<450>>.
+    Found 1-bit register for signal <RegArray_0<449>>.
+    Found 1-bit register for signal <RegArray_0<448>>.
+    Found 1-bit register for signal <RegArray_0<447>>.
+    Found 1-bit register for signal <RegArray_0<446>>.
+    Found 1-bit register for signal <RegArray_0<445>>.
+    Found 1-bit register for signal <RegArray_0<444>>.
+    Found 1-bit register for signal <RegArray_0<443>>.
+    Found 1-bit register for signal <RegArray_0<442>>.
+    Found 1-bit register for signal <RegArray_0<441>>.
+    Found 1-bit register for signal <RegArray_0<440>>.
+    Found 1-bit register for signal <RegArray_0<439>>.
+    Found 1-bit register for signal <RegArray_0<438>>.
+    Found 1-bit register for signal <RegArray_0<437>>.
+    Found 1-bit register for signal <RegArray_0<436>>.
+    Found 1-bit register for signal <RegArray_0<435>>.
+    Found 1-bit register for signal <RegArray_0<434>>.
+    Found 1-bit register for signal <RegArray_0<433>>.
+    Found 1-bit register for signal <RegArray_0<432>>.
+    Found 1-bit register for signal <RegArray_0<431>>.
+    Found 1-bit register for signal <RegArray_0<430>>.
+    Found 1-bit register for signal <RegArray_0<429>>.
+    Found 1-bit register for signal <RegArray_0<428>>.
+    Found 1-bit register for signal <RegArray_0<427>>.
+    Found 1-bit register for signal <RegArray_0<426>>.
+    Found 1-bit register for signal <RegArray_0<425>>.
+    Found 1-bit register for signal <RegArray_0<424>>.
+    Found 1-bit register for signal <RegArray_0<423>>.
+    Found 1-bit register for signal <RegArray_0<422>>.
+    Found 1-bit register for signal <RegArray_0<421>>.
+    Found 1-bit register for signal <RegArray_0<420>>.
+    Found 1-bit register for signal <RegArray_0<419>>.
+    Found 1-bit register for signal <RegArray_0<418>>.
+    Found 1-bit register for signal <RegArray_0<417>>.
+    Found 1-bit register for signal <RegArray_0<416>>.
+    Found 1-bit register for signal <RegArray_0<415>>.
+    Found 1-bit register for signal <RegArray_0<414>>.
+    Found 1-bit register for signal <RegArray_0<413>>.
+    Found 1-bit register for signal <RegArray_0<412>>.
+    Found 1-bit register for signal <RegArray_0<411>>.
+    Found 1-bit register for signal <RegArray_0<410>>.
+    Found 1-bit register for signal <RegArray_0<409>>.
+    Found 1-bit register for signal <RegArray_0<408>>.
+    Found 1-bit register for signal <RegArray_0<407>>.
+    Found 1-bit register for signal <RegArray_0<406>>.
+    Found 1-bit register for signal <RegArray_0<405>>.
+    Found 1-bit register for signal <RegArray_0<404>>.
+    Found 1-bit register for signal <RegArray_0<403>>.
+    Found 1-bit register for signal <RegArray_0<402>>.
+    Found 1-bit register for signal <RegArray_0<401>>.
+    Found 1-bit register for signal <RegArray_0<400>>.
+    Found 1-bit register for signal <RegArray_0<399>>.
+    Found 1-bit register for signal <RegArray_0<398>>.
+    Found 1-bit register for signal <RegArray_0<397>>.
+    Found 1-bit register for signal <RegArray_0<396>>.
+    Found 1-bit register for signal <RegArray_0<395>>.
+    Found 1-bit register for signal <RegArray_0<394>>.
+    Found 1-bit register for signal <RegArray_0<393>>.
+    Found 1-bit register for signal <RegArray_0<392>>.
+    Found 1-bit register for signal <RegArray_0<391>>.
+    Found 1-bit register for signal <RegArray_0<390>>.
+    Found 1-bit register for signal <RegArray_0<389>>.
+    Found 1-bit register for signal <RegArray_0<388>>.
+    Found 1-bit register for signal <RegArray_0<387>>.
+    Found 1-bit register for signal <RegArray_0<386>>.
+    Found 1-bit register for signal <RegArray_0<385>>.
+    Found 1-bit register for signal <RegArray_0<384>>.
+    Found 1-bit register for signal <RegArray_0<383>>.
+    Found 1-bit register for signal <RegArray_0<382>>.
+    Found 1-bit register for signal <RegArray_0<381>>.
+    Found 1-bit register for signal <RegArray_0<380>>.
+    Found 1-bit register for signal <RegArray_0<379>>.
+    Found 1-bit register for signal <RegArray_0<378>>.
+    Found 1-bit register for signal <RegArray_0<377>>.
+    Found 1-bit register for signal <RegArray_0<376>>.
+    Found 1-bit register for signal <RegArray_0<375>>.
+    Found 1-bit register for signal <RegArray_0<374>>.
+    Found 1-bit register for signal <RegArray_0<373>>.
+    Found 1-bit register for signal <RegArray_0<372>>.
+    Found 1-bit register for signal <RegArray_0<371>>.
+    Found 1-bit register for signal <RegArray_0<370>>.
+    Found 1-bit register for signal <RegArray_0<369>>.
+    Found 1-bit register for signal <RegArray_0<368>>.
+    Found 1-bit register for signal <RegArray_0<367>>.
+    Found 1-bit register for signal <RegArray_0<366>>.
+    Found 1-bit register for signal <RegArray_0<365>>.
+    Found 1-bit register for signal <RegArray_0<364>>.
+    Found 1-bit register for signal <RegArray_0<363>>.
+    Found 1-bit register for signal <RegArray_0<362>>.
+    Found 1-bit register for signal <RegArray_0<361>>.
+    Found 1-bit register for signal <RegArray_0<360>>.
+    Found 1-bit register for signal <RegArray_0<359>>.
+    Found 1-bit register for signal <RegArray_0<358>>.
+    Found 1-bit register for signal <RegArray_0<357>>.
+    Found 1-bit register for signal <RegArray_0<356>>.
+    Found 1-bit register for signal <RegArray_0<355>>.
+    Found 1-bit register for signal <RegArray_0<354>>.
+    Found 1-bit register for signal <RegArray_0<353>>.
+    Found 1-bit register for signal <RegArray_0<352>>.
+    Found 1-bit register for signal <RegArray_0<351>>.
+    Found 1-bit register for signal <RegArray_0<350>>.
+    Found 1-bit register for signal <RegArray_0<349>>.
+    Found 1-bit register for signal <RegArray_0<348>>.
+    Found 1-bit register for signal <RegArray_0<347>>.
+    Found 1-bit register for signal <RegArray_0<346>>.
+    Found 1-bit register for signal <RegArray_0<345>>.
+    Found 1-bit register for signal <RegArray_0<344>>.
+    Found 1-bit register for signal <RegArray_0<343>>.
+    Found 1-bit register for signal <RegArray_0<342>>.
+    Found 1-bit register for signal <RegArray_0<341>>.
+    Found 1-bit register for signal <RegArray_0<340>>.
+    Found 1-bit register for signal <RegArray_0<339>>.
+    Found 1-bit register for signal <RegArray_0<338>>.
+    Found 1-bit register for signal <RegArray_0<337>>.
+    Found 1-bit register for signal <RegArray_0<336>>.
+    Found 1-bit register for signal <RegArray_0<335>>.
+    Found 1-bit register for signal <RegArray_0<334>>.
+    Found 1-bit register for signal <RegArray_0<333>>.
+    Found 1-bit register for signal <RegArray_0<332>>.
+    Found 1-bit register for signal <RegArray_0<331>>.
+    Found 1-bit register for signal <RegArray_0<330>>.
+    Found 1-bit register for signal <RegArray_0<329>>.
+    Found 1-bit register for signal <RegArray_0<328>>.
+    Found 1-bit register for signal <RegArray_0<327>>.
+    Found 1-bit register for signal <RegArray_0<326>>.
+    Found 1-bit register for signal <RegArray_0<325>>.
+    Found 1-bit register for signal <RegArray_0<324>>.
+    Found 1-bit register for signal <RegArray_0<323>>.
+    Found 1-bit register for signal <RegArray_0<322>>.
+    Found 1-bit register for signal <RegArray_0<321>>.
+    Found 1-bit register for signal <RegArray_0<320>>.
+    Found 1-bit register for signal <RegArray_0<319>>.
+    Found 1-bit register for signal <RegArray_0<318>>.
+    Found 1-bit register for signal <RegArray_0<317>>.
+    Found 1-bit register for signal <RegArray_0<316>>.
+    Found 1-bit register for signal <RegArray_0<315>>.
+    Found 1-bit register for signal <RegArray_0<314>>.
+    Found 1-bit register for signal <RegArray_0<313>>.
+    Found 1-bit register for signal <RegArray_0<312>>.
+    Found 1-bit register for signal <RegArray_0<311>>.
+    Found 1-bit register for signal <RegArray_0<310>>.
+    Found 1-bit register for signal <RegArray_0<309>>.
+    Found 1-bit register for signal <RegArray_0<308>>.
+    Found 1-bit register for signal <RegArray_0<307>>.
+    Found 1-bit register for signal <RegArray_0<306>>.
+    Found 1-bit register for signal <RegArray_0<305>>.
+    Found 1-bit register for signal <RegArray_0<304>>.
+    Found 1-bit register for signal <RegArray_0<303>>.
+    Found 1-bit register for signal <RegArray_0<302>>.
+    Found 1-bit register for signal <RegArray_0<301>>.
+    Found 1-bit register for signal <RegArray_0<300>>.
+    Found 1-bit register for signal <RegArray_0<299>>.
+    Found 1-bit register for signal <RegArray_0<298>>.
+    Found 1-bit register for signal <RegArray_0<297>>.
+    Found 1-bit register for signal <RegArray_0<296>>.
+    Found 1-bit register for signal <RegArray_0<295>>.
+    Found 1-bit register for signal <RegArray_0<294>>.
+    Found 1-bit register for signal <RegArray_0<293>>.
+    Found 1-bit register for signal <RegArray_0<292>>.
+    Found 1-bit register for signal <RegArray_0<291>>.
+    Found 1-bit register for signal <RegArray_0<290>>.
+    Found 1-bit register for signal <RegArray_0<289>>.
+    Found 1-bit register for signal <RegArray_0<288>>.
+    Found 1-bit register for signal <RegArray_0<287>>.
+    Found 1-bit register for signal <RegArray_0<286>>.
+    Found 1-bit register for signal <RegArray_0<285>>.
+    Found 1-bit register for signal <RegArray_0<284>>.
+    Found 1-bit register for signal <RegArray_0<283>>.
+    Found 1-bit register for signal <RegArray_0<282>>.
+    Found 1-bit register for signal <RegArray_0<281>>.
+    Found 1-bit register for signal <RegArray_0<280>>.
+    Found 1-bit register for signal <RegArray_0<279>>.
+    Found 1-bit register for signal <RegArray_0<278>>.
+    Found 1-bit register for signal <RegArray_0<277>>.
+    Found 1-bit register for signal <RegArray_0<276>>.
+    Found 1-bit register for signal <RegArray_0<275>>.
+    Found 1-bit register for signal <RegArray_0<274>>.
+    Found 1-bit register for signal <RegArray_0<273>>.
+    Found 1-bit register for signal <RegArray_0<272>>.
+    Found 1-bit register for signal <RegArray_0<271>>.
+    Found 1-bit register for signal <RegArray_0<270>>.
+    Found 1-bit register for signal <RegArray_0<269>>.
+    Found 1-bit register for signal <RegArray_0<268>>.
+    Found 1-bit register for signal <RegArray_0<267>>.
+    Found 1-bit register for signal <RegArray_0<266>>.
+    Found 1-bit register for signal <RegArray_0<265>>.
+    Found 1-bit register for signal <RegArray_0<264>>.
+    Found 1-bit register for signal <RegArray_0<263>>.
+    Found 1-bit register for signal <RegArray_0<262>>.
+    Found 1-bit register for signal <RegArray_0<261>>.
+    Found 1-bit register for signal <RegArray_0<260>>.
+    Found 1-bit register for signal <RegArray_0<259>>.
+    Found 1-bit register for signal <RegArray_0<258>>.
+    Found 1-bit register for signal <RegArray_0<257>>.
+    Found 1-bit register for signal <RegArray_0<256>>.
+    Found 1-bit register for signal <RegArray_0<255>>.
+    Found 1-bit register for signal <RegArray_0<254>>.
+    Found 1-bit register for signal <RegArray_0<253>>.
+    Found 1-bit register for signal <RegArray_0<252>>.
+    Found 1-bit register for signal <RegArray_0<251>>.
+    Found 1-bit register for signal <RegArray_0<250>>.
+    Found 1-bit register for signal <RegArray_0<249>>.
+    Found 1-bit register for signal <RegArray_0<248>>.
+    Found 1-bit register for signal <RegArray_0<247>>.
+    Found 1-bit register for signal <RegArray_0<246>>.
+    Found 1-bit register for signal <RegArray_0<245>>.
+    Found 1-bit register for signal <RegArray_0<244>>.
+    Found 1-bit register for signal <RegArray_0<243>>.
+    Found 1-bit register for signal <RegArray_0<242>>.
+    Found 1-bit register for signal <RegArray_0<241>>.
+    Found 1-bit register for signal <RegArray_0<240>>.
+    Found 1-bit register for signal <RegArray_0<239>>.
+    Found 1-bit register for signal <RegArray_0<238>>.
+    Found 1-bit register for signal <RegArray_0<237>>.
+    Found 1-bit register for signal <RegArray_0<236>>.
+    Found 1-bit register for signal <RegArray_0<235>>.
+    Found 1-bit register for signal <RegArray_0<234>>.
+    Found 1-bit register for signal <RegArray_0<233>>.
+    Found 1-bit register for signal <RegArray_0<232>>.
+    Found 1-bit register for signal <RegArray_0<231>>.
+    Found 1-bit register for signal <RegArray_0<230>>.
+    Found 1-bit register for signal <RegArray_0<229>>.
+    Found 1-bit register for signal <RegArray_0<228>>.
+    Found 1-bit register for signal <RegArray_0<227>>.
+    Found 1-bit register for signal <RegArray_0<226>>.
+    Found 1-bit register for signal <RegArray_0<225>>.
+    Found 1-bit register for signal <RegArray_0<224>>.
+    Found 1-bit register for signal <RegArray_0<223>>.
+    Found 1-bit register for signal <RegArray_0<222>>.
+    Found 1-bit register for signal <RegArray_0<221>>.
+    Found 1-bit register for signal <RegArray_0<220>>.
+    Found 1-bit register for signal <RegArray_0<219>>.
+    Found 1-bit register for signal <RegArray_0<218>>.
+    Found 1-bit register for signal <RegArray_0<217>>.
+    Found 1-bit register for signal <RegArray_0<216>>.
+    Found 1-bit register for signal <RegArray_0<215>>.
+    Found 1-bit register for signal <RegArray_0<214>>.
+    Found 1-bit register for signal <RegArray_0<213>>.
+    Found 1-bit register for signal <RegArray_0<212>>.
+    Found 1-bit register for signal <RegArray_0<211>>.
+    Found 1-bit register for signal <RegArray_0<210>>.
+    Found 1-bit register for signal <RegArray_0<209>>.
+    Found 1-bit register for signal <RegArray_0<208>>.
+    Found 1-bit register for signal <RegArray_0<207>>.
+    Found 1-bit register for signal <RegArray_0<206>>.
+    Found 1-bit register for signal <RegArray_0<205>>.
+    Found 1-bit register for signal <RegArray_0<204>>.
+    Found 1-bit register for signal <RegArray_0<203>>.
+    Found 1-bit register for signal <RegArray_0<202>>.
+    Found 1-bit register for signal <RegArray_0<201>>.
+    Found 1-bit register for signal <RegArray_0<200>>.
+    Found 1-bit register for signal <RegArray_0<199>>.
+    Found 1-bit register for signal <RegArray_0<198>>.
+    Found 1-bit register for signal <RegArray_0<197>>.
+    Found 1-bit register for signal <RegArray_0<196>>.
+    Found 1-bit register for signal <RegArray_0<195>>.
+    Found 1-bit register for signal <RegArray_0<194>>.
+    Found 1-bit register for signal <RegArray_0<193>>.
+    Found 1-bit register for signal <RegArray_0<192>>.
+    Found 1-bit register for signal <RegArray_0<191>>.
+    Found 1-bit register for signal <RegArray_0<190>>.
+    Found 1-bit register for signal <RegArray_0<189>>.
+    Found 1-bit register for signal <RegArray_0<188>>.
+    Found 1-bit register for signal <RegArray_0<187>>.
+    Found 1-bit register for signal <RegArray_0<186>>.
+    Found 1-bit register for signal <RegArray_0<185>>.
+    Found 1-bit register for signal <RegArray_0<184>>.
+    Found 1-bit register for signal <RegArray_0<183>>.
+    Found 1-bit register for signal <RegArray_0<182>>.
+    Found 1-bit register for signal <RegArray_0<181>>.
+    Found 1-bit register for signal <RegArray_0<180>>.
+    Found 1-bit register for signal <RegArray_0<179>>.
+    Found 1-bit register for signal <RegArray_0<178>>.
+    Found 1-bit register for signal <RegArray_0<177>>.
+    Found 1-bit register for signal <RegArray_0<176>>.
+    Found 1-bit register for signal <RegArray_0<175>>.
+    Found 1-bit register for signal <RegArray_0<174>>.
+    Found 1-bit register for signal <RegArray_0<173>>.
+    Found 1-bit register for signal <RegArray_0<172>>.
+    Found 1-bit register for signal <RegArray_0<171>>.
+    Found 1-bit register for signal <RegArray_0<170>>.
+    Found 1-bit register for signal <RegArray_0<169>>.
+    Found 1-bit register for signal <RegArray_0<168>>.
+    Found 1-bit register for signal <RegArray_0<167>>.
+    Found 1-bit register for signal <RegArray_0<166>>.
+    Found 1-bit register for signal <RegArray_0<165>>.
+    Found 1-bit register for signal <RegArray_0<164>>.
+    Found 1-bit register for signal <RegArray_0<163>>.
+    Found 1-bit register for signal <RegArray_0<162>>.
+    Found 1-bit register for signal <RegArray_0<161>>.
+    Found 1-bit register for signal <RegArray_0<160>>.
+    Found 1-bit register for signal <RegArray_0<159>>.
+    Found 1-bit register for signal <RegArray_0<158>>.
+    Found 1-bit register for signal <RegArray_0<157>>.
+    Found 1-bit register for signal <RegArray_0<156>>.
+    Found 1-bit register for signal <RegArray_0<155>>.
+    Found 1-bit register for signal <RegArray_0<154>>.
+    Found 1-bit register for signal <RegArray_0<153>>.
+    Found 1-bit register for signal <RegArray_0<152>>.
+    Found 1-bit register for signal <RegArray_0<151>>.
+    Found 1-bit register for signal <RegArray_0<150>>.
+    Found 1-bit register for signal <RegArray_0<149>>.
+    Found 1-bit register for signal <RegArray_0<148>>.
+    Found 1-bit register for signal <RegArray_0<147>>.
+    Found 1-bit register for signal <RegArray_0<146>>.
+    Found 1-bit register for signal <RegArray_0<145>>.
+    Found 1-bit register for signal <RegArray_0<144>>.
+    Found 1-bit register for signal <RegArray_0<143>>.
+    Found 1-bit register for signal <RegArray_0<142>>.
+    Found 1-bit register for signal <RegArray_0<141>>.
+    Found 1-bit register for signal <RegArray_0<140>>.
+    Found 1-bit register for signal <RegArray_0<139>>.
+    Found 1-bit register for signal <RegArray_0<138>>.
+    Found 1-bit register for signal <RegArray_0<137>>.
+    Found 1-bit register for signal <RegArray_0<136>>.
+    Found 1-bit register for signal <RegArray_0<135>>.
+    Found 1-bit register for signal <RegArray_0<134>>.
+    Found 1-bit register for signal <RegArray_0<133>>.
+    Found 1-bit register for signal <RegArray_0<132>>.
+    Found 1-bit register for signal <RegArray_0<131>>.
+    Found 1-bit register for signal <RegArray_0<130>>.
+    Found 1-bit register for signal <RegArray_0<129>>.
+    Found 1-bit register for signal <RegArray_0<128>>.
+    Found 1-bit register for signal <RegArray_0<127>>.
+    Found 1-bit register for signal <RegArray_0<126>>.
+    Found 1-bit register for signal <RegArray_0<125>>.
+    Found 1-bit register for signal <RegArray_0<124>>.
+    Found 1-bit register for signal <RegArray_0<123>>.
+    Found 1-bit register for signal <RegArray_0<122>>.
+    Found 1-bit register for signal <RegArray_0<121>>.
+    Found 1-bit register for signal <RegArray_0<120>>.
+    Found 1-bit register for signal <RegArray_0<119>>.
+    Found 1-bit register for signal <RegArray_0<118>>.
+    Found 1-bit register for signal <RegArray_0<117>>.
+    Found 1-bit register for signal <RegArray_0<116>>.
+    Found 1-bit register for signal <RegArray_0<115>>.
+    Found 1-bit register for signal <RegArray_0<114>>.
+    Found 1-bit register for signal <RegArray_0<113>>.
+    Found 1-bit register for signal <RegArray_0<112>>.
+    Found 1-bit register for signal <RegArray_0<111>>.
+    Found 1-bit register for signal <RegArray_0<110>>.
+    Found 1-bit register for signal <RegArray_0<109>>.
+    Found 1-bit register for signal <RegArray_0<108>>.
+    Found 1-bit register for signal <RegArray_0<107>>.
+    Found 1-bit register for signal <RegArray_0<106>>.
+    Found 1-bit register for signal <RegArray_0<105>>.
+    Found 1-bit register for signal <RegArray_0<104>>.
+    Found 1-bit register for signal <RegArray_0<103>>.
+    Found 1-bit register for signal <RegArray_0<102>>.
+    Found 1-bit register for signal <RegArray_0<101>>.
+    Found 1-bit register for signal <RegArray_0<100>>.
+    Found 1-bit register for signal <RegArray_0<99>>.
+    Found 1-bit register for signal <RegArray_0<98>>.
+    Found 1-bit register for signal <RegArray_0<97>>.
+    Found 1-bit register for signal <RegArray_0<96>>.
+    Found 1-bit register for signal <RegArray_0<95>>.
+    Found 1-bit register for signal <RegArray_0<94>>.
+    Found 1-bit register for signal <RegArray_0<93>>.
+    Found 1-bit register for signal <RegArray_0<92>>.
+    Found 1-bit register for signal <RegArray_0<91>>.
+    Found 1-bit register for signal <RegArray_0<90>>.
+    Found 1-bit register for signal <RegArray_0<89>>.
+    Found 1-bit register for signal <RegArray_0<88>>.
+    Found 1-bit register for signal <RegArray_0<87>>.
+    Found 1-bit register for signal <RegArray_0<86>>.
+    Found 1-bit register for signal <RegArray_0<85>>.
+    Found 1-bit register for signal <RegArray_0<84>>.
+    Found 1-bit register for signal <RegArray_0<83>>.
+    Found 1-bit register for signal <RegArray_0<82>>.
+    Found 1-bit register for signal <RegArray_0<81>>.
+    Found 1-bit register for signal <RegArray_0<80>>.
+    Found 1-bit register for signal <RegArray_0<79>>.
+    Found 1-bit register for signal <RegArray_0<78>>.
+    Found 1-bit register for signal <RegArray_0<77>>.
+    Found 1-bit register for signal <RegArray_0<76>>.
+    Found 1-bit register for signal <RegArray_0<75>>.
+    Found 1-bit register for signal <RegArray_0<74>>.
+    Found 1-bit register for signal <RegArray_0<73>>.
+    Found 1-bit register for signal <RegArray_0<72>>.
+    Found 1-bit register for signal <RegArray_0<71>>.
+    Found 1-bit register for signal <RegArray_0<70>>.
+    Found 1-bit register for signal <RegArray_0<69>>.
+    Found 1-bit register for signal <RegArray_0<68>>.
+    Found 1-bit register for signal <RegArray_0<67>>.
+    Found 1-bit register for signal <RegArray_0<66>>.
+    Found 1-bit register for signal <RegArray_0<65>>.
+    Found 1-bit register for signal <RegArray_0<64>>.
+    Found 1-bit register for signal <RegArray_0<63>>.
+    Found 1-bit register for signal <RegArray_0<62>>.
+    Found 1-bit register for signal <RegArray_0<61>>.
+    Found 1-bit register for signal <RegArray_0<60>>.
+    Found 1-bit register for signal <RegArray_0<59>>.
+    Found 1-bit register for signal <RegArray_0<58>>.
+    Found 1-bit register for signal <RegArray_0<57>>.
+    Found 1-bit register for signal <RegArray_0<56>>.
+    Found 1-bit register for signal <RegArray_0<55>>.
+    Found 1-bit register for signal <RegArray_0<54>>.
+    Found 1-bit register for signal <RegArray_0<53>>.
+    Found 1-bit register for signal <RegArray_0<52>>.
+    Found 1-bit register for signal <RegArray_0<51>>.
+    Found 1-bit register for signal <RegArray_0<50>>.
+    Found 1-bit register for signal <RegArray_0<49>>.
+    Found 1-bit register for signal <RegArray_0<48>>.
+    Found 1-bit register for signal <RegArray_0<47>>.
+    Found 1-bit register for signal <RegArray_0<46>>.
+    Found 1-bit register for signal <RegArray_0<45>>.
+    Found 1-bit register for signal <RegArray_0<44>>.
+    Found 1-bit register for signal <RegArray_0<43>>.
+    Found 1-bit register for signal <RegArray_0<42>>.
+    Found 1-bit register for signal <RegArray_0<41>>.
+    Found 1-bit register for signal <RegArray_0<40>>.
+    Found 1-bit register for signal <RegArray_0<39>>.
+    Found 1-bit register for signal <RegArray_0<38>>.
+    Found 1-bit register for signal <RegArray_0<37>>.
+    Found 1-bit register for signal <RegArray_0<36>>.
+    Found 1-bit register for signal <RegArray_0<35>>.
+    Found 1-bit register for signal <RegArray_0<34>>.
+    Found 1-bit register for signal <RegArray_0<33>>.
+    Found 1-bit register for signal <RegArray_0<32>>.
+    Found 1-bit register for signal <RegArray_0<31>>.
+    Found 1-bit register for signal <RegArray_0<30>>.
+    Found 1-bit register for signal <RegArray_0<29>>.
+    Found 1-bit register for signal <RegArray_0<28>>.
+    Found 1-bit register for signal <RegArray_0<27>>.
+    Found 1-bit register for signal <RegArray_0<26>>.
+    Found 1-bit register for signal <RegArray_0<25>>.
+    Found 1-bit register for signal <RegArray_0<24>>.
+    Found 1-bit register for signal <RegArray_0<23>>.
+    Found 1-bit register for signal <RegArray_0<22>>.
+    Found 1-bit register for signal <RegArray_0<21>>.
+    Found 1-bit register for signal <RegArray_0<20>>.
+    Found 1-bit register for signal <RegArray_0<19>>.
+    Found 1-bit register for signal <RegArray_0<18>>.
+    Found 1-bit register for signal <RegArray_0<17>>.
+    Found 1-bit register for signal <RegArray_0<16>>.
+    Found 1-bit register for signal <RegArray_0<15>>.
+    Found 1-bit register for signal <RegArray_0<14>>.
+    Found 1-bit register for signal <RegArray_0<13>>.
+    Found 1-bit register for signal <RegArray_0<12>>.
+    Found 1-bit register for signal <RegArray_0<11>>.
+    Found 1-bit register for signal <RegArray_0<10>>.
+    Found 1-bit register for signal <RegArray_0<9>>.
+    Found 1-bit register for signal <RegArray_0<8>>.
+    Found 1-bit register for signal <RegArray_0<7>>.
+    Found 1-bit register for signal <RegArray_0<6>>.
+    Found 1-bit register for signal <RegArray_0<5>>.
+    Found 1-bit register for signal <RegArray_0<4>>.
+    Found 1-bit register for signal <RegArray_0<3>>.
+    Found 1-bit register for signal <RegArray_0<2>>.
+    Found 1-bit register for signal <RegArray_0<1>>.
+    Found 1-bit register for signal <RegArray_0<0>>.
     Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_0_OUT> created at line 31.
-    Found 10-bit adder for signal <position[9]_GND_1_o_add_4_OUT> created at line 57.
-    Found 11-bit adder for signal <n0082> created at line 62.
-    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_6_OUT<9:0>> created at line 59.
     Found 16x7-bit Read Only RAM for signal <SSD_CATHODES>
-    Found 32-bit comparator lessequal for signal <n0015> created at line 62
-    Found 11-bit comparator lessequal for signal <n0018> created at line 62
-    Found 10-bit comparator greater for signal <GND_1_o_CounterX[9]_LessThan_16_o> created at line 63
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_17_o> created at line 63
-    WARNING:Xst:2404 -  FFs/Latches <vga_b<0:0>> (without init value) have a constant value of 0 in block <ConwayVGA>.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_12_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_13_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_14_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_15_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_16_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_17_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_18_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_19_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_20_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_21_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_22_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_23_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_24_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_25_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_26_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_27_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_28_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_29_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_30_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_31_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_32_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_33_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_34_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_35_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_36_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_37_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_38_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_39_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_40_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_41_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_42_o> created at line 66.
+    Found 1-bit 24-to-1 multiplexer for signal <y[4]_X_1_o_Mux_43_o> created at line 66.
+    Found 1-bit 32-to-1 multiplexer for signal <x[4]_y[4]_Mux_44_o> created at line 66.
+    Found 10-bit comparator greater for signal <CounterY[9]_GND_1_o_LessThan_11_o> created at line 65
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_12_o> created at line 65
     Summary:
 	inferred   1 RAM(s).
-	inferred   4 Adder/Subtractor(s).
-	inferred  41 D-type flip-flop(s).
-	inferred   4 Comparator(s).
-	inferred  12 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 798 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred 6623 Multiplexer(s).
 Unit <ConwayVGA> synthesized.
 
 Synthesizing Unit <hvsync_generator>.
-    Related source file is "C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v".
+    Related source file is "C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\hvsync_generator.v".
+    Found 7-bit register for signal <x>.
     Found 10-bit register for signal <CounterY>.
+    Found 7-bit register for signal <y>.
     Found 1-bit register for signal <vga_HS>.
     Found 1-bit register for signal <vga_VS>.
     Found 1-bit register for signal <inDisplayArea>.
     Found 10-bit register for signal <CounterX>.
-    Found 10-bit adder for signal <CounterX[9]_GND_3_o_add_2_OUT> created at line 34.
-    Found 10-bit adder for signal <CounterY[9]_GND_3_o_add_9_OUT> created at line 44.
-    Found 10-bit comparator greater for signal <PWR_3_o_CounterX[9]_LessThan_16_o> created at line 49
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_17_o> created at line 49
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_21_o> created at line 58
-    Found 10-bit comparator greater for signal <CounterY[9]_GND_3_o_LessThan_22_o> created at line 58
+    Found 10-bit adder for signal <CounterX[9]_GND_3_o_add_2_OUT> created at line 42.
+    Found 7-bit adder for signal <x[6]_GND_3_o_add_4_OUT> created at line 44.
+    Found 10-bit adder for signal <CounterY[9]_GND_3_o_add_15_OUT> created at line 59.
+    Found 7-bit adder for signal <y[6]_GND_3_o_add_17_OUT> created at line 61.
+    Found 10-bit comparator greater for signal <PWR_3_o_CounterX[9]_LessThan_29_o> created at line 67
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_30_o> created at line 67
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_34_o> created at line 76
+    Found 10-bit comparator greater for signal <CounterY[9]_GND_3_o_LessThan_35_o> created at line 76
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  23 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
 	inferred   4 Comparator(s).
 Unit <hvsync_generator> synthesized.
 
@@ -181,22 +981,26 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x7-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 6
+# Adders/Subtractors                                   : 5
  10-bit adder                                          : 2
- 10-bit addsub                                         : 1
- 11-bit adder                                          : 1
- 11-bit subtractor                                     : 1
  28-bit adder                                          : 1
-# Registers                                            : 10
- 1-bit register                                        : 6
- 10-bit register                                       : 3
+ 7-bit adder                                           : 2
+# Registers                                            : 778
+ 1-bit register                                        : 773
+ 10-bit register                                       : 2
  28-bit register                                       : 1
-# Comparators                                          : 8
+ 7-bit register                                        : 2
+# Comparators                                          : 6
  10-bit comparator greater                             : 6
- 11-bit comparator lessequal                           : 1
- 32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 12
- 1-bit 2-to-1 multiplexer                              : 12
+# Multiplexers                                         : 6623
+ 1-bit 2-to-1 multiplexer                              : 6589
+ 1-bit 24-to-1 multiplexer                             : 32
+ 1-bit 32-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 4231
+ 1-bit xor2                                            : 2880
+ 1-bit xor3                                            : 1293
+ 1-bit xor4                                            : 58
 
 =========================================================================
 
@@ -206,7 +1010,6 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <ConwayVGA>.
-The following registers are absorbed into accumulator <position>: 1 register on signal <position>.
 The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
@@ -223,7 +1026,9 @@ Unit <ConwayVGA> synthesized (advanced).
 
 Synthesizing (advanced) Unit <hvsync_generator>.
 The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
+The following registers are absorbed into counter <x>: 1 register on signal <x>.
 The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
+The following registers are absorbed into counter <y>: 1 register on signal <y>.
 Unit <hvsync_generator> synthesized (advanced).
 
 =========================================================================
@@ -232,22 +1037,23 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x7-bit single-port distributed Read Only RAM        : 1
-# Adders/Subtractors                                   : 2
- 11-bit adder                                          : 1
- 11-bit subtractor                                     : 1
-# Counters                                             : 3
+# Counters                                             : 5
  10-bit up counter                                     : 2
  28-bit up counter                                     : 1
-# Accumulators                                         : 1
- 10-bit updown accumulator                             : 1
-# Registers                                            : 6
- Flip-Flops                                            : 6
-# Comparators                                          : 8
+ 7-bit up counter                                      : 2
+# Registers                                            : 773
+ Flip-Flops                                            : 773
+# Comparators                                          : 6
  10-bit comparator greater                             : 6
- 11-bit comparator lessequal                           : 1
- 32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 12
- 1-bit 2-to-1 multiplexer                              : 12
+# Multiplexers                                         : 6623
+ 1-bit 2-to-1 multiplexer                              : 6589
+ 1-bit 24-to-1 multiplexer                             : 32
+ 1-bit 32-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 4231
+ 1-bit xor2                                            : 2880
+ 1-bit xor3                                            : 1293
+ 1-bit xor4                                            : 58
 
 =========================================================================
 
@@ -260,16 +1066,713 @@ WARNING:Xst:2677 - Node <DIV_CLK_24> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <DIV_CLK_25> of sequential type is unconnected in block <ConwayVGA>.
 WARNING:Xst:2677 - Node <DIV_CLK_26> of sequential type is unconnected in block <ConwayVGA>.
 WARNING:Xst:2677 - Node <DIV_CLK_27> of sequential type is unconnected in block <ConwayVGA>.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    RegArray_0_441 in unit <ConwayVGA>
+    RegArray_0_442 in unit <ConwayVGA>
+    RegArray_0_444 in unit <ConwayVGA>
+    RegArray_0_445 in unit <ConwayVGA>
+    RegArray_0_443 in unit <ConwayVGA>
+    RegArray_0_447 in unit <ConwayVGA>
+    RegArray_0_473 in unit <ConwayVGA>
+    RegArray_0_446 in unit <ConwayVGA>
+    RegArray_0_475 in unit <ConwayVGA>
+    RegArray_0_476 in unit <ConwayVGA>
+    RegArray_0_474 in unit <ConwayVGA>
+    RegArray_0_477 in unit <ConwayVGA>
+    RegArray_0_478 in unit <ConwayVGA>
+    RegArray_0_505 in unit <ConwayVGA>
+    RegArray_0_506 in unit <ConwayVGA>
+    RegArray_0_479 in unit <ConwayVGA>
+    RegArray_0_508 in unit <ConwayVGA>
+    RegArray_0_509 in unit <ConwayVGA>
+    RegArray_0_507 in unit <ConwayVGA>
+    RegArray_0_511 in unit <ConwayVGA>
+    RegArray_0_537 in unit <ConwayVGA>
+    RegArray_0_510 in unit <ConwayVGA>
+    RegArray_0_538 in unit <ConwayVGA>
+    RegArray_0_539 in unit <ConwayVGA>
+    RegArray_0_541 in unit <ConwayVGA>
+    RegArray_0_542 in unit <ConwayVGA>
+    RegArray_0_540 in unit <ConwayVGA>
+    RegArray_0_569 in unit <ConwayVGA>
+    RegArray_0_570 in unit <ConwayVGA>
+    RegArray_0_543 in unit <ConwayVGA>
+    RegArray_0_572 in unit <ConwayVGA>
+    RegArray_0_573 in unit <ConwayVGA>
+    RegArray_0_571 in unit <ConwayVGA>
+    RegArray_0_575 in unit <ConwayVGA>
+    RegArray_0_601 in unit <ConwayVGA>
+    RegArray_0_574 in unit <ConwayVGA>
+    RegArray_0_603 in unit <ConwayVGA>
+    RegArray_0_604 in unit <ConwayVGA>
+    RegArray_0_602 in unit <ConwayVGA>
+    RegArray_0_606 in unit <ConwayVGA>
+    RegArray_0_607 in unit <ConwayVGA>
+    RegArray_0_605 in unit <ConwayVGA>
+    RegArray_0_634 in unit <ConwayVGA>
+    RegArray_0_635 in unit <ConwayVGA>
+    RegArray_0_633 in unit <ConwayVGA>
+    RegArray_0_636 in unit <ConwayVGA>
+    RegArray_0_637 in unit <ConwayVGA>
+    RegArray_0_639 in unit <ConwayVGA>
+    RegArray_0_665 in unit <ConwayVGA>
+    RegArray_0_638 in unit <ConwayVGA>
+    RegArray_0_667 in unit <ConwayVGA>
+    RegArray_0_668 in unit <ConwayVGA>
+    RegArray_0_666 in unit <ConwayVGA>
+    RegArray_0_670 in unit <ConwayVGA>
+    RegArray_0_671 in unit <ConwayVGA>
+    RegArray_0_669 in unit <ConwayVGA>
+    RegArray_0_697 in unit <ConwayVGA>
+    RegArray_0_698 in unit <ConwayVGA>
+    RegArray_0_700 in unit <ConwayVGA>
+    RegArray_0_701 in unit <ConwayVGA>
+    RegArray_0_699 in unit <ConwayVGA>
+    RegArray_0_703 in unit <ConwayVGA>
+    RegArray_0_729 in unit <ConwayVGA>
+    RegArray_0_702 in unit <ConwayVGA>
+    RegArray_0_731 in unit <ConwayVGA>
+    RegArray_0_732 in unit <ConwayVGA>
+    RegArray_0_730 in unit <ConwayVGA>
+    RegArray_0_733 in unit <ConwayVGA>
+    RegArray_0_734 in unit <ConwayVGA>
+    RegArray_0_761 in unit <ConwayVGA>
+    RegArray_0_762 in unit <ConwayVGA>
+    RegArray_0_735 in unit <ConwayVGA>
+    RegArray_0_764 in unit <ConwayVGA>
+    RegArray_0_765 in unit <ConwayVGA>
+    RegArray_0_763 in unit <ConwayVGA>
+    RegArray_0_767 in unit <ConwayVGA>
+    RegArray_0_25 in unit <ConwayVGA>
+    RegArray_0_766 in unit <ConwayVGA>
+    RegArray_0_27 in unit <ConwayVGA>
+    RegArray_0_28 in unit <ConwayVGA>
+    RegArray_0_26 in unit <ConwayVGA>
+    RegArray_0_30 in unit <ConwayVGA>
+    RegArray_0_31 in unit <ConwayVGA>
+    RegArray_0_29 in unit <ConwayVGA>
+    RegArray_0_58 in unit <ConwayVGA>
+    RegArray_0_59 in unit <ConwayVGA>
+    RegArray_0_57 in unit <ConwayVGA>
+    RegArray_0_61 in unit <ConwayVGA>
+    RegArray_0_62 in unit <ConwayVGA>
+    RegArray_0_60 in unit <ConwayVGA>
+    RegArray_0_63 in unit <ConwayVGA>
+    RegArray_0_89 in unit <ConwayVGA>
+    RegArray_0_91 in unit <ConwayVGA>
+    RegArray_0_92 in unit <ConwayVGA>
+    RegArray_0_90 in unit <ConwayVGA>
+    RegArray_0_94 in unit <ConwayVGA>
+    RegArray_0_95 in unit <ConwayVGA>
+    RegArray_0_93 in unit <ConwayVGA>
+    RegArray_0_122 in unit <ConwayVGA>
+    RegArray_0_123 in unit <ConwayVGA>
+    RegArray_0_121 in unit <ConwayVGA>
+    RegArray_0_125 in unit <ConwayVGA>
+    RegArray_0_126 in unit <ConwayVGA>
+    RegArray_0_124 in unit <ConwayVGA>
+    RegArray_0_153 in unit <ConwayVGA>
+    RegArray_0_154 in unit <ConwayVGA>
+    RegArray_0_127 in unit <ConwayVGA>
+    RegArray_0_156 in unit <ConwayVGA>
+    RegArray_0_157 in unit <ConwayVGA>
+    RegArray_0_155 in unit <ConwayVGA>
+    RegArray_0_159 in unit <ConwayVGA>
+    RegArray_0_185 in unit <ConwayVGA>
+    RegArray_0_158 in unit <ConwayVGA>
+    RegArray_0_186 in unit <ConwayVGA>
+    RegArray_0_187 in unit <ConwayVGA>
+    RegArray_0_189 in unit <ConwayVGA>
+    RegArray_0_190 in unit <ConwayVGA>
+    RegArray_0_188 in unit <ConwayVGA>
+    RegArray_0_217 in unit <ConwayVGA>
+    RegArray_0_218 in unit <ConwayVGA>
+    RegArray_0_191 in unit <ConwayVGA>
+    RegArray_0_220 in unit <ConwayVGA>
+    RegArray_0_221 in unit <ConwayVGA>
+    RegArray_0_219 in unit <ConwayVGA>
+    RegArray_0_223 in unit <ConwayVGA>
+    RegArray_0_249 in unit <ConwayVGA>
+    RegArray_0_222 in unit <ConwayVGA>
+    RegArray_0_251 in unit <ConwayVGA>
+    RegArray_0_252 in unit <ConwayVGA>
+    RegArray_0_250 in unit <ConwayVGA>
+    RegArray_0_254 in unit <ConwayVGA>
+    RegArray_0_255 in unit <ConwayVGA>
+    RegArray_0_253 in unit <ConwayVGA>
+    RegArray_0_282 in unit <ConwayVGA>
+    RegArray_0_283 in unit <ConwayVGA>
+    RegArray_0_281 in unit <ConwayVGA>
+    RegArray_0_284 in unit <ConwayVGA>
+    RegArray_0_285 in unit <ConwayVGA>
+    RegArray_0_287 in unit <ConwayVGA>
+    RegArray_0_313 in unit <ConwayVGA>
+    RegArray_0_286 in unit <ConwayVGA>
+    RegArray_0_315 in unit <ConwayVGA>
+    RegArray_0_316 in unit <ConwayVGA>
+    RegArray_0_314 in unit <ConwayVGA>
+    RegArray_0_318 in unit <ConwayVGA>
+    RegArray_0_319 in unit <ConwayVGA>
+    RegArray_0_317 in unit <ConwayVGA>
+    RegArray_0_345 in unit <ConwayVGA>
+    RegArray_0_346 in unit <ConwayVGA>
+    RegArray_0_348 in unit <ConwayVGA>
+    RegArray_0_349 in unit <ConwayVGA>
+    RegArray_0_347 in unit <ConwayVGA>
+    RegArray_0_351 in unit <ConwayVGA>
+    RegArray_0_377 in unit <ConwayVGA>
+    RegArray_0_350 in unit <ConwayVGA>
+    RegArray_0_379 in unit <ConwayVGA>
+    RegArray_0_380 in unit <ConwayVGA>
+    RegArray_0_378 in unit <ConwayVGA>
+    RegArray_0_381 in unit <ConwayVGA>
+    RegArray_0_382 in unit <ConwayVGA>
+    RegArray_0_433 in unit <ConwayVGA>
+    RegArray_0_434 in unit <ConwayVGA>
+    RegArray_0_383 in unit <ConwayVGA>
+    RegArray_0_436 in unit <ConwayVGA>
+    RegArray_0_437 in unit <ConwayVGA>
+    RegArray_0_435 in unit <ConwayVGA>
+    RegArray_0_439 in unit <ConwayVGA>
+    RegArray_0_465 in unit <ConwayVGA>
+    RegArray_0_438 in unit <ConwayVGA>
+    RegArray_0_467 in unit <ConwayVGA>
+    RegArray_0_468 in unit <ConwayVGA>
+    RegArray_0_466 in unit <ConwayVGA>
+    RegArray_0_470 in unit <ConwayVGA>
+    RegArray_0_471 in unit <ConwayVGA>
+    RegArray_0_469 in unit <ConwayVGA>
+    RegArray_0_498 in unit <ConwayVGA>
+    RegArray_0_499 in unit <ConwayVGA>
+    RegArray_0_497 in unit <ConwayVGA>
+    RegArray_0_501 in unit <ConwayVGA>
+    RegArray_0_502 in unit <ConwayVGA>
+    RegArray_0_500 in unit <ConwayVGA>
+    RegArray_0_503 in unit <ConwayVGA>
+    RegArray_0_529 in unit <ConwayVGA>
+    RegArray_0_531 in unit <ConwayVGA>
+    RegArray_0_532 in unit <ConwayVGA>
+    RegArray_0_530 in unit <ConwayVGA>
+    RegArray_0_534 in unit <ConwayVGA>
+    RegArray_0_535 in unit <ConwayVGA>
+    RegArray_0_533 in unit <ConwayVGA>
+    RegArray_0_562 in unit <ConwayVGA>
+    RegArray_0_563 in unit <ConwayVGA>
+    RegArray_0_561 in unit <ConwayVGA>
+    RegArray_0_565 in unit <ConwayVGA>
+    RegArray_0_566 in unit <ConwayVGA>
+    RegArray_0_564 in unit <ConwayVGA>
+    RegArray_0_593 in unit <ConwayVGA>
+    RegArray_0_594 in unit <ConwayVGA>
+    RegArray_0_567 in unit <ConwayVGA>
+    RegArray_0_596 in unit <ConwayVGA>
+    RegArray_0_597 in unit <ConwayVGA>
+    RegArray_0_595 in unit <ConwayVGA>
+    RegArray_0_599 in unit <ConwayVGA>
+    RegArray_0_625 in unit <ConwayVGA>
+    RegArray_0_598 in unit <ConwayVGA>
+    RegArray_0_626 in unit <ConwayVGA>
+    RegArray_0_627 in unit <ConwayVGA>
+    RegArray_0_629 in unit <ConwayVGA>
+    RegArray_0_630 in unit <ConwayVGA>
+    RegArray_0_628 in unit <ConwayVGA>
+    RegArray_0_657 in unit <ConwayVGA>
+    RegArray_0_658 in unit <ConwayVGA>
+    RegArray_0_631 in unit <ConwayVGA>
+    RegArray_0_660 in unit <ConwayVGA>
+    RegArray_0_661 in unit <ConwayVGA>
+    RegArray_0_659 in unit <ConwayVGA>
+    RegArray_0_663 in unit <ConwayVGA>
+    RegArray_0_689 in unit <ConwayVGA>
+    RegArray_0_662 in unit <ConwayVGA>
+    RegArray_0_691 in unit <ConwayVGA>
+    RegArray_0_692 in unit <ConwayVGA>
+    RegArray_0_690 in unit <ConwayVGA>
+    RegArray_0_694 in unit <ConwayVGA>
+    RegArray_0_695 in unit <ConwayVGA>
+    RegArray_0_693 in unit <ConwayVGA>
+    RegArray_0_722 in unit <ConwayVGA>
+    RegArray_0_723 in unit <ConwayVGA>
+    RegArray_0_721 in unit <ConwayVGA>
+    RegArray_0_724 in unit <ConwayVGA>
+    RegArray_0_725 in unit <ConwayVGA>
+    RegArray_0_727 in unit <ConwayVGA>
+    RegArray_0_753 in unit <ConwayVGA>
+    RegArray_0_726 in unit <ConwayVGA>
+    RegArray_0_755 in unit <ConwayVGA>
+    RegArray_0_756 in unit <ConwayVGA>
+    RegArray_0_754 in unit <ConwayVGA>
+    RegArray_0_758 in unit <ConwayVGA>
+    RegArray_0_759 in unit <ConwayVGA>
+    RegArray_0_757 in unit <ConwayVGA>
+    RegArray_0_17 in unit <ConwayVGA>
+    RegArray_0_18 in unit <ConwayVGA>
+    RegArray_0_20 in unit <ConwayVGA>
+    RegArray_0_21 in unit <ConwayVGA>
+    RegArray_0_19 in unit <ConwayVGA>
+    RegArray_0_23 in unit <ConwayVGA>
+    RegArray_0_49 in unit <ConwayVGA>
+    RegArray_0_22 in unit <ConwayVGA>
+    RegArray_0_51 in unit <ConwayVGA>
+    RegArray_0_52 in unit <ConwayVGA>
+    RegArray_0_50 in unit <ConwayVGA>
+    RegArray_0_53 in unit <ConwayVGA>
+    RegArray_0_54 in unit <ConwayVGA>
+    RegArray_0_81 in unit <ConwayVGA>
+    RegArray_0_82 in unit <ConwayVGA>
+    RegArray_0_55 in unit <ConwayVGA>
+    RegArray_0_84 in unit <ConwayVGA>
+    RegArray_0_85 in unit <ConwayVGA>
+    RegArray_0_83 in unit <ConwayVGA>
+    RegArray_0_87 in unit <ConwayVGA>
+    RegArray_0_113 in unit <ConwayVGA>
+    RegArray_0_86 in unit <ConwayVGA>
+    RegArray_0_115 in unit <ConwayVGA>
+    RegArray_0_116 in unit <ConwayVGA>
+    RegArray_0_114 in unit <ConwayVGA>
+    RegArray_0_118 in unit <ConwayVGA>
+    RegArray_0_119 in unit <ConwayVGA>
+    RegArray_0_117 in unit <ConwayVGA>
+    RegArray_0_146 in unit <ConwayVGA>
+    RegArray_0_147 in unit <ConwayVGA>
+    RegArray_0_145 in unit <ConwayVGA>
+    RegArray_0_149 in unit <ConwayVGA>
+    RegArray_0_150 in unit <ConwayVGA>
+    RegArray_0_148 in unit <ConwayVGA>
+    RegArray_0_151 in unit <ConwayVGA>
+    RegArray_0_177 in unit <ConwayVGA>
+    RegArray_0_179 in unit <ConwayVGA>
+    RegArray_0_180 in unit <ConwayVGA>
+    RegArray_0_178 in unit <ConwayVGA>
+    RegArray_0_182 in unit <ConwayVGA>
+    RegArray_0_183 in unit <ConwayVGA>
+    RegArray_0_181 in unit <ConwayVGA>
+    RegArray_0_210 in unit <ConwayVGA>
+    RegArray_0_211 in unit <ConwayVGA>
+    RegArray_0_209 in unit <ConwayVGA>
+    RegArray_0_213 in unit <ConwayVGA>
+    RegArray_0_214 in unit <ConwayVGA>
+    RegArray_0_212 in unit <ConwayVGA>
+    RegArray_0_241 in unit <ConwayVGA>
+    RegArray_0_242 in unit <ConwayVGA>
+    RegArray_0_215 in unit <ConwayVGA>
+    RegArray_0_244 in unit <ConwayVGA>
+    RegArray_0_245 in unit <ConwayVGA>
+    RegArray_0_243 in unit <ConwayVGA>
+    RegArray_0_247 in unit <ConwayVGA>
+    RegArray_0_273 in unit <ConwayVGA>
+    RegArray_0_246 in unit <ConwayVGA>
+    RegArray_0_274 in unit <ConwayVGA>
+    RegArray_0_275 in unit <ConwayVGA>
+    RegArray_0_277 in unit <ConwayVGA>
+    RegArray_0_278 in unit <ConwayVGA>
+    RegArray_0_276 in unit <ConwayVGA>
+    RegArray_0_305 in unit <ConwayVGA>
+    RegArray_0_306 in unit <ConwayVGA>
+    RegArray_0_279 in unit <ConwayVGA>
+    RegArray_0_308 in unit <ConwayVGA>
+    RegArray_0_309 in unit <ConwayVGA>
+    RegArray_0_307 in unit <ConwayVGA>
+    RegArray_0_311 in unit <ConwayVGA>
+    RegArray_0_337 in unit <ConwayVGA>
+    RegArray_0_310 in unit <ConwayVGA>
+    RegArray_0_339 in unit <ConwayVGA>
+    RegArray_0_340 in unit <ConwayVGA>
+    RegArray_0_338 in unit <ConwayVGA>
+    RegArray_0_342 in unit <ConwayVGA>
+    RegArray_0_343 in unit <ConwayVGA>
+    RegArray_0_341 in unit <ConwayVGA>
+    RegArray_0_370 in unit <ConwayVGA>
+    RegArray_0_371 in unit <ConwayVGA>
+    RegArray_0_369 in unit <ConwayVGA>
+    RegArray_0_372 in unit <ConwayVGA>
+    RegArray_0_373 in unit <ConwayVGA>
+    RegArray_0_375 in unit <ConwayVGA>
+    RegArray_0_374 in unit <ConwayVGA>
+    RegArray_0_426 in unit <ConwayVGA>
+    RegArray_0_427 in unit <ConwayVGA>
+    RegArray_0_425 in unit <ConwayVGA>
+    RegArray_0_429 in unit <ConwayVGA>
+    RegArray_0_430 in unit <ConwayVGA>
+    RegArray_0_428 in unit <ConwayVGA>
+    RegArray_0_431 in unit <ConwayVGA>
+    RegArray_0_457 in unit <ConwayVGA>
+    RegArray_0_459 in unit <ConwayVGA>
+    RegArray_0_460 in unit <ConwayVGA>
+    RegArray_0_458 in unit <ConwayVGA>
+    RegArray_0_462 in unit <ConwayVGA>
+    RegArray_0_463 in unit <ConwayVGA>
+    RegArray_0_461 in unit <ConwayVGA>
+    RegArray_0_490 in unit <ConwayVGA>
+    RegArray_0_491 in unit <ConwayVGA>
+    RegArray_0_489 in unit <ConwayVGA>
+    RegArray_0_492 in unit <ConwayVGA>
+    RegArray_0_493 in unit <ConwayVGA>
+    RegArray_0_495 in unit <ConwayVGA>
+    RegArray_0_521 in unit <ConwayVGA>
+    RegArray_0_494 in unit <ConwayVGA>
+    RegArray_0_523 in unit <ConwayVGA>
+    RegArray_0_524 in unit <ConwayVGA>
+    RegArray_0_522 in unit <ConwayVGA>
+    RegArray_0_526 in unit <ConwayVGA>
+    RegArray_0_527 in unit <ConwayVGA>
+    RegArray_0_525 in unit <ConwayVGA>
+    RegArray_0_554 in unit <ConwayVGA>
+    RegArray_0_555 in unit <ConwayVGA>
+    RegArray_0_553 in unit <ConwayVGA>
+    RegArray_0_557 in unit <ConwayVGA>
+    RegArray_0_558 in unit <ConwayVGA>
+    RegArray_0_556 in unit <ConwayVGA>
+    RegArray_0_585 in unit <ConwayVGA>
+    RegArray_0_586 in unit <ConwayVGA>
+    RegArray_0_559 in unit <ConwayVGA>
+    RegArray_0_588 in unit <ConwayVGA>
+    RegArray_0_589 in unit <ConwayVGA>
+    RegArray_0_587 in unit <ConwayVGA>
+    RegArray_0_590 in unit <ConwayVGA>
+    RegArray_0_591 in unit <ConwayVGA>
+    RegArray_0_618 in unit <ConwayVGA>
+    RegArray_0_619 in unit <ConwayVGA>
+    RegArray_0_617 in unit <ConwayVGA>
+    RegArray_0_621 in unit <ConwayVGA>
+    RegArray_0_622 in unit <ConwayVGA>
+    RegArray_0_620 in unit <ConwayVGA>
+    RegArray_0_649 in unit <ConwayVGA>
+    RegArray_0_650 in unit <ConwayVGA>
+    RegArray_0_623 in unit <ConwayVGA>
+    RegArray_0_652 in unit <ConwayVGA>
+    RegArray_0_653 in unit <ConwayVGA>
+    RegArray_0_651 in unit <ConwayVGA>
+    RegArray_0_655 in unit <ConwayVGA>
+    RegArray_0_681 in unit <ConwayVGA>
+    RegArray_0_654 in unit <ConwayVGA>
+    RegArray_0_683 in unit <ConwayVGA>
+    RegArray_0_684 in unit <ConwayVGA>
+    RegArray_0_682 in unit <ConwayVGA>
+    RegArray_0_686 in unit <ConwayVGA>
+    RegArray_0_687 in unit <ConwayVGA>
+    RegArray_0_685 in unit <ConwayVGA>
+    RegArray_0_713 in unit <ConwayVGA>
+    RegArray_0_714 in unit <ConwayVGA>
+    RegArray_0_716 in unit <ConwayVGA>
+    RegArray_0_717 in unit <ConwayVGA>
+    RegArray_0_715 in unit <ConwayVGA>
+    RegArray_0_719 in unit <ConwayVGA>
+    RegArray_0_745 in unit <ConwayVGA>
+    RegArray_0_718 in unit <ConwayVGA>
+    RegArray_0_747 in unit <ConwayVGA>
+    RegArray_0_748 in unit <ConwayVGA>
+    RegArray_0_746 in unit <ConwayVGA>
+    RegArray_0_750 in unit <ConwayVGA>
+    RegArray_0_751 in unit <ConwayVGA>
+    RegArray_0_749 in unit <ConwayVGA>
+    RegArray_0_9 in unit <ConwayVGA>
+    RegArray_0_10 in unit <ConwayVGA>
+    RegArray_0_12 in unit <ConwayVGA>
+    RegArray_0_13 in unit <ConwayVGA>
+    RegArray_0_11 in unit <ConwayVGA>
+    RegArray_0_15 in unit <ConwayVGA>
+    RegArray_0_41 in unit <ConwayVGA>
+    RegArray_0_14 in unit <ConwayVGA>
+    RegArray_0_42 in unit <ConwayVGA>
+    RegArray_0_43 in unit <ConwayVGA>
+    RegArray_0_45 in unit <ConwayVGA>
+    RegArray_0_46 in unit <ConwayVGA>
+    RegArray_0_44 in unit <ConwayVGA>
+    RegArray_0_73 in unit <ConwayVGA>
+    RegArray_0_74 in unit <ConwayVGA>
+    RegArray_0_47 in unit <ConwayVGA>
+    RegArray_0_76 in unit <ConwayVGA>
+    RegArray_0_77 in unit <ConwayVGA>
+    RegArray_0_75 in unit <ConwayVGA>
+    RegArray_0_78 in unit <ConwayVGA>
+    RegArray_0_79 in unit <ConwayVGA>
+    RegArray_0_106 in unit <ConwayVGA>
+    RegArray_0_107 in unit <ConwayVGA>
+    RegArray_0_105 in unit <ConwayVGA>
+    RegArray_0_109 in unit <ConwayVGA>
+    RegArray_0_110 in unit <ConwayVGA>
+    RegArray_0_108 in unit <ConwayVGA>
+    RegArray_0_137 in unit <ConwayVGA>
+    RegArray_0_138 in unit <ConwayVGA>
+    RegArray_0_111 in unit <ConwayVGA>
+    RegArray_0_139 in unit <ConwayVGA>
+    RegArray_0_140 in unit <ConwayVGA>
+    RegArray_0_142 in unit <ConwayVGA>
+    RegArray_0_143 in unit <ConwayVGA>
+    RegArray_0_141 in unit <ConwayVGA>
+    RegArray_0_170 in unit <ConwayVGA>
+    RegArray_0_171 in unit <ConwayVGA>
+    RegArray_0_169 in unit <ConwayVGA>
+    RegArray_0_173 in unit <ConwayVGA>
+    RegArray_0_174 in unit <ConwayVGA>
+    RegArray_0_172 in unit <ConwayVGA>
+    RegArray_0_201 in unit <ConwayVGA>
+    RegArray_0_202 in unit <ConwayVGA>
+    RegArray_0_175 in unit <ConwayVGA>
+    RegArray_0_204 in unit <ConwayVGA>
+    RegArray_0_205 in unit <ConwayVGA>
+    RegArray_0_203 in unit <ConwayVGA>
+    RegArray_0_207 in unit <ConwayVGA>
+    RegArray_0_233 in unit <ConwayVGA>
+    RegArray_0_206 in unit <ConwayVGA>
+    RegArray_0_235 in unit <ConwayVGA>
+    RegArray_0_236 in unit <ConwayVGA>
+    RegArray_0_234 in unit <ConwayVGA>
+    RegArray_0_237 in unit <ConwayVGA>
+    RegArray_0_238 in unit <ConwayVGA>
+    RegArray_0_265 in unit <ConwayVGA>
+    RegArray_0_266 in unit <ConwayVGA>
+    RegArray_0_239 in unit <ConwayVGA>
+    RegArray_0_268 in unit <ConwayVGA>
+    RegArray_0_269 in unit <ConwayVGA>
+    RegArray_0_267 in unit <ConwayVGA>
+    RegArray_0_271 in unit <ConwayVGA>
+    RegArray_0_297 in unit <ConwayVGA>
+    RegArray_0_270 in unit <ConwayVGA>
+    RegArray_0_299 in unit <ConwayVGA>
+    RegArray_0_300 in unit <ConwayVGA>
+    RegArray_0_298 in unit <ConwayVGA>
+    RegArray_0_302 in unit <ConwayVGA>
+    RegArray_0_303 in unit <ConwayVGA>
+    RegArray_0_301 in unit <ConwayVGA>
+    RegArray_0_330 in unit <ConwayVGA>
+    RegArray_0_331 in unit <ConwayVGA>
+    RegArray_0_329 in unit <ConwayVGA>
+    RegArray_0_333 in unit <ConwayVGA>
+    RegArray_0_334 in unit <ConwayVGA>
+    RegArray_0_332 in unit <ConwayVGA>
+    RegArray_0_335 in unit <ConwayVGA>
+    RegArray_0_361 in unit <ConwayVGA>
+    RegArray_0_363 in unit <ConwayVGA>
+    RegArray_0_364 in unit <ConwayVGA>
+    RegArray_0_362 in unit <ConwayVGA>
+    RegArray_0_366 in unit <ConwayVGA>
+    RegArray_0_367 in unit <ConwayVGA>
+    RegArray_0_365 in unit <ConwayVGA>
+    RegArray_0_416 in unit <ConwayVGA>
+    RegArray_0_417 in unit <ConwayVGA>
+    RegArray_0_419 in unit <ConwayVGA>
+    RegArray_0_420 in unit <ConwayVGA>
+    RegArray_0_418 in unit <ConwayVGA>
+    RegArray_0_422 in unit <ConwayVGA>
+    RegArray_0_423 in unit <ConwayVGA>
+    RegArray_0_421 in unit <ConwayVGA>
+    RegArray_0_449 in unit <ConwayVGA>
+    RegArray_0_450 in unit <ConwayVGA>
+    RegArray_0_448 in unit <ConwayVGA>
+    RegArray_0_452 in unit <ConwayVGA>
+    RegArray_0_453 in unit <ConwayVGA>
+    RegArray_0_451 in unit <ConwayVGA>
+    RegArray_0_454 in unit <ConwayVGA>
+    RegArray_0_455 in unit <ConwayVGA>
+    RegArray_0_481 in unit <ConwayVGA>
+    RegArray_0_482 in unit <ConwayVGA>
+    RegArray_0_480 in unit <ConwayVGA>
+    RegArray_0_484 in unit <ConwayVGA>
+    RegArray_0_485 in unit <ConwayVGA>
+    RegArray_0_483 in unit <ConwayVGA>
+    RegArray_0_487 in unit <ConwayVGA>
+    RegArray_0_512 in unit <ConwayVGA>
+    RegArray_0_486 in unit <ConwayVGA>
+    RegArray_0_513 in unit <ConwayVGA>
+    RegArray_0_514 in unit <ConwayVGA>
+    RegArray_0_516 in unit <ConwayVGA>
+    RegArray_0_517 in unit <ConwayVGA>
+    RegArray_0_515 in unit <ConwayVGA>
+    RegArray_0_519 in unit <ConwayVGA>
+    RegArray_0_544 in unit <ConwayVGA>
+    RegArray_0_518 in unit <ConwayVGA>
+    RegArray_0_546 in unit <ConwayVGA>
+    RegArray_0_547 in unit <ConwayVGA>
+    RegArray_0_545 in unit <ConwayVGA>
+    RegArray_0_548 in unit <ConwayVGA>
+    RegArray_0_549 in unit <ConwayVGA>
+    RegArray_0_551 in unit <ConwayVGA>
+    RegArray_0_576 in unit <ConwayVGA>
+    RegArray_0_550 in unit <ConwayVGA>
+    RegArray_0_578 in unit <ConwayVGA>
+    RegArray_0_579 in unit <ConwayVGA>
+    RegArray_0_577 in unit <ConwayVGA>
+    RegArray_0_581 in unit <ConwayVGA>
+    RegArray_0_582 in unit <ConwayVGA>
+    RegArray_0_580 in unit <ConwayVGA>
+    RegArray_0_608 in unit <ConwayVGA>
+    RegArray_0_609 in unit <ConwayVGA>
+    RegArray_0_583 in unit <ConwayVGA>
+    RegArray_0_611 in unit <ConwayVGA>
+    RegArray_0_612 in unit <ConwayVGA>
+    RegArray_0_610 in unit <ConwayVGA>
+    RegArray_0_614 in unit <ConwayVGA>
+    RegArray_0_615 in unit <ConwayVGA>
+    RegArray_0_613 in unit <ConwayVGA>
+    RegArray_0_641 in unit <ConwayVGA>
+    RegArray_0_642 in unit <ConwayVGA>
+    RegArray_0_640 in unit <ConwayVGA>
+    RegArray_0_643 in unit <ConwayVGA>
+    RegArray_0_644 in unit <ConwayVGA>
+    RegArray_0_646 in unit <ConwayVGA>
+    RegArray_0_647 in unit <ConwayVGA>
+    RegArray_0_645 in unit <ConwayVGA>
+    RegArray_0_673 in unit <ConwayVGA>
+    RegArray_0_674 in unit <ConwayVGA>
+    RegArray_0_672 in unit <ConwayVGA>
+    RegArray_0_676 in unit <ConwayVGA>
+    RegArray_0_677 in unit <ConwayVGA>
+    RegArray_0_675 in unit <ConwayVGA>
+    RegArray_0_679 in unit <ConwayVGA>
+    RegArray_0_704 in unit <ConwayVGA>
+    RegArray_0_678 in unit <ConwayVGA>
+    RegArray_0_706 in unit <ConwayVGA>
+    RegArray_0_707 in unit <ConwayVGA>
+    RegArray_0_705 in unit <ConwayVGA>
+    RegArray_0_709 in unit <ConwayVGA>
+    RegArray_0_710 in unit <ConwayVGA>
+    RegArray_0_708 in unit <ConwayVGA>
+    RegArray_0_736 in unit <ConwayVGA>
+    RegArray_0_737 in unit <ConwayVGA>
+    RegArray_0_711 in unit <ConwayVGA>
+    RegArray_0_738 in unit <ConwayVGA>
+    RegArray_0_739 in unit <ConwayVGA>
+    RegArray_0_741 in unit <ConwayVGA>
+    RegArray_0_742 in unit <ConwayVGA>
+    RegArray_0_740 in unit <ConwayVGA>
+    RegArray_0_0 in unit <ConwayVGA>
+    RegArray_0_743 in unit <ConwayVGA>
+    RegArray_0_2 in unit <ConwayVGA>
+    RegArray_0_3 in unit <ConwayVGA>
+    RegArray_0_1 in unit <ConwayVGA>
+    RegArray_0_5 in unit <ConwayVGA>
+    RegArray_0_6 in unit <ConwayVGA>
+    RegArray_0_4 in unit <ConwayVGA>
+    RegArray_0_32 in unit <ConwayVGA>
+    RegArray_0_33 in unit <ConwayVGA>
+    RegArray_0_7 in unit <ConwayVGA>
+    RegArray_0_35 in unit <ConwayVGA>
+    RegArray_0_36 in unit <ConwayVGA>
+    RegArray_0_34 in unit <ConwayVGA>
+    RegArray_0_38 in unit <ConwayVGA>
+    RegArray_0_39 in unit <ConwayVGA>
+    RegArray_0_37 in unit <ConwayVGA>
+    RegArray_0_64 in unit <ConwayVGA>
+    RegArray_0_65 in unit <ConwayVGA>
+    RegArray_0_67 in unit <ConwayVGA>
+    RegArray_0_68 in unit <ConwayVGA>
+    RegArray_0_66 in unit <ConwayVGA>
+    RegArray_0_70 in unit <ConwayVGA>
+    RegArray_0_71 in unit <ConwayVGA>
+    RegArray_0_69 in unit <ConwayVGA>
+    RegArray_0_97 in unit <ConwayVGA>
+    RegArray_0_98 in unit <ConwayVGA>
+    RegArray_0_96 in unit <ConwayVGA>
+    RegArray_0_99 in unit <ConwayVGA>
+    RegArray_0_100 in unit <ConwayVGA>
+    RegArray_0_102 in unit <ConwayVGA>
+    RegArray_0_103 in unit <ConwayVGA>
+    RegArray_0_101 in unit <ConwayVGA>
+    RegArray_0_129 in unit <ConwayVGA>
+    RegArray_0_130 in unit <ConwayVGA>
+    RegArray_0_128 in unit <ConwayVGA>
+    RegArray_0_132 in unit <ConwayVGA>
+    RegArray_0_133 in unit <ConwayVGA>
+    RegArray_0_131 in unit <ConwayVGA>
+    RegArray_0_134 in unit <ConwayVGA>
+    RegArray_0_135 in unit <ConwayVGA>
+    RegArray_0_161 in unit <ConwayVGA>
+    RegArray_0_162 in unit <ConwayVGA>
+    RegArray_0_160 in unit <ConwayVGA>
+    RegArray_0_164 in unit <ConwayVGA>
+    RegArray_0_165 in unit <ConwayVGA>
+    RegArray_0_163 in unit <ConwayVGA>
+    RegArray_0_167 in unit <ConwayVGA>
+    RegArray_0_192 in unit <ConwayVGA>
+    RegArray_0_166 in unit <ConwayVGA>
+    RegArray_0_194 in unit <ConwayVGA>
+    RegArray_0_195 in unit <ConwayVGA>
+    RegArray_0_193 in unit <ConwayVGA>
+    RegArray_0_197 in unit <ConwayVGA>
+    RegArray_0_198 in unit <ConwayVGA>
+    RegArray_0_196 in unit <ConwayVGA>
+    RegArray_0_224 in unit <ConwayVGA>
+    RegArray_0_225 in unit <ConwayVGA>
+    RegArray_0_199 in unit <ConwayVGA>
+    RegArray_0_227 in unit <ConwayVGA>
+    RegArray_0_228 in unit <ConwayVGA>
+    RegArray_0_226 in unit <ConwayVGA>
+    RegArray_0_229 in unit <ConwayVGA>
+    RegArray_0_230 in unit <ConwayVGA>
+    RegArray_0_256 in unit <ConwayVGA>
+    RegArray_0_257 in unit <ConwayVGA>
+    RegArray_0_231 in unit <ConwayVGA>
+    RegArray_0_259 in unit <ConwayVGA>
+    RegArray_0_260 in unit <ConwayVGA>
+    RegArray_0_258 in unit <ConwayVGA>
+    RegArray_0_262 in unit <ConwayVGA>
+    RegArray_0_263 in unit <ConwayVGA>
+    RegArray_0_261 in unit <ConwayVGA>
+    RegArray_0_289 in unit <ConwayVGA>
+    RegArray_0_290 in unit <ConwayVGA>
+    RegArray_0_288 in unit <ConwayVGA>
+    RegArray_0_292 in unit <ConwayVGA>
+    RegArray_0_293 in unit <ConwayVGA>
+    RegArray_0_291 in unit <ConwayVGA>
+    RegArray_0_295 in unit <ConwayVGA>
+    RegArray_0_320 in unit <ConwayVGA>
+    RegArray_0_294 in unit <ConwayVGA>
+    RegArray_0_322 in unit <ConwayVGA>
+    RegArray_0_323 in unit <ConwayVGA>
+    RegArray_0_321 in unit <ConwayVGA>
+    RegArray_0_324 in unit <ConwayVGA>
+    RegArray_0_325 in unit <ConwayVGA>
+    RegArray_0_327 in unit <ConwayVGA>
+    RegArray_0_352 in unit <ConwayVGA>
+    RegArray_0_326 in unit <ConwayVGA>
+    RegArray_0_354 in unit <ConwayVGA>
+    RegArray_0_355 in unit <ConwayVGA>
+    RegArray_0_353 in unit <ConwayVGA>
+    RegArray_0_357 in unit <ConwayVGA>
+    RegArray_0_358 in unit <ConwayVGA>
+    RegArray_0_356 in unit <ConwayVGA>
+    RegArray_0_359 in unit <ConwayVGA>
+
 
 Optimizing unit <ConwayVGA> ...
-WARNING:Xst:1710 - FF/Latch <position_0> (without init value) has a constant value of 0 in block <ConwayVGA>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <hvsync_generator> ...
-WARNING:Xst:1710 - FF/Latch <position_0> (without init value) has a constant value of 0 in block <ConwayVGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <syncgen/y_6> of sequential type is unconnected in block <ConwayVGA>.
+WARNING:Xst:2677 - Node <syncgen/y_5> of sequential type is unconnected in block <ConwayVGA>.
+WARNING:Xst:2677 - Node <syncgen/x_6> of sequential type is unconnected in block <ConwayVGA>.
+WARNING:Xst:2677 - Node <syncgen/x_5> of sequential type is unconnected in block <ConwayVGA>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ConwayVGA, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block ConwayVGA, actual ratio is 81.
+FlipFlop state has been replicated 1 time(s)
+FlipFlop syncgen/y_0 has been replicated 12 time(s)
+FlipFlop syncgen/y_1 has been replicated 12 time(s)
+FlipFlop syncgen/y_2 has been replicated 2 time(s)
 FlipFlop state has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
@@ -278,8 +1781,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 58
- Flip-Flops                                            : 58
+# Registers                                            : 1520
+ Flip-Flops                                            : 1520
 
 =========================================================================
 
@@ -302,28 +1805,30 @@ Top Level Output File Name         : ConwayVGA.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 259
+# BELS                             : 6952
 #      BUF                         : 3
 #      GND                         : 1
-#      INV                         : 8
+#      INV                         : 9
 #      LUT1                        : 39
-#      LUT2                        : 13
-#      LUT3                        : 21
-#      LUT4                        : 30
-#      LUT5                        : 27
-#      LUT6                        : 25
-#      MUXCY                       : 49
+#      LUT2                        : 26
+#      LUT3                        : 847
+#      LUT4                        : 75
+#      LUT5                        : 904
+#      LUT6                        : 4899
+#      MUXCY                       : 39
+#      MUXF7                       : 67
 #      VCC                         : 1
 #      XORCY                       : 42
-# FlipFlops/Latches                : 58
-#      FD                          : 23
-#      FDC                         : 22
-#      FDCE                        : 2
-#      FDR                         : 2
-#      FDRE                        : 5
-#      FDSE                        : 4
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# FlipFlops/Latches                : 1528
+#      FD                          : 2
+#      FDC                         : 790
+#      FDCE                        : 3
+#      FDP                         : 667
+#      FDR                         : 12
+#      FDRE                        : 46
+#      LDC                         : 8
+# Clock Buffers                    : 3
+#      BUFG                        : 2
 #      BUFGP                       : 1
 # IO Buffers                       : 43
 #      IBUF                        : 13
@@ -336,16 +1841,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              57  out of  18224     0%  
- Number of Slice LUTs:                  163  out of   9112     1%  
-    Number used as Logic:               163  out of   9112     1%  
+ Number of Slice Registers:            1527  out of  18224     8%  
+ Number of Slice LUTs:                 6799  out of   9112    74%  
+    Number used as Logic:              6799  out of   9112    74%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    163
-   Number with an unused Flip Flop:     106  out of    163    65%  
-   Number with an unused LUT:             0  out of    163     0%  
-   Number of fully used LUT-FF pairs:    57  out of    163    34%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:   7456
+   Number with an unused Flip Flop:    5929  out of   7456    79%  
+   Number with an unused LUT:           657  out of   7456     8%  
+   Number of fully used LUT-FF pairs:   870  out of   7456    11%  
+   Number of unique control sets:        34
 
 IO Utilization: 
  Number of IOs:                          44
@@ -353,7 +1858,7 @@ IO Utilization:
     IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
 
 ---------------------------
 Partition Resource Summary:
@@ -373,13 +1878,24 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-DIV_CLK_21                         | NONE(state)            | 11    |
-DIV_CLK_1                          | BUFG                   | 25    |
-ClkPort                            | BUFGP                  | 22    |
------------------------------------+------------------------+-------+
+---------------------------------------------+----------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)      | Load  |
+---------------------------------------------+----------------------------+-------+
+DIV_CLK_21                                   | BUFG                       | 1438  |
+ClkPort                                      | BUFGP                      | 22    |
+DIV_CLK_1                                    | BUFG                       | 60    |
+reset_Sw7_AND_9129_o(reset_Sw7_AND_9129_o1:O)| NONE(*)(RegArray_0_359_LDC)| 1     |
+reset_Sw6_AND_8491_o(reset_Sw6_AND_8491_o1:O)| NONE(*)(RegArray_0_743_LDC)| 1     |
+reset_Sw5_AND_9115_o(reset_Sw5_AND_9115_o1:O)| NONE(*)(RegArray_0_365_LDC)| 1     |
+reset_Sw4_AND_8477_o(reset_Sw4_AND_8477_o1:O)| NONE(*)(RegArray_0_749_LDC)| 1     |
+reset_Sw3_AND_9101_o(reset_Sw3_AND_9101_o1:O)| NONE(*)(RegArray_0_374_LDC)| 1     |
+reset_Sw2_AND_8463_o(reset_Sw2_AND_8463_o1:O)| NONE(*)(RegArray_0_757_LDC)| 1     |
+reset_Sw1_AND_9087_o(reset_Sw1_AND_9087_o1:O)| NONE(*)(RegArray_0_383_LDC)| 1     |
+reset_Sw0_AND_8449_o(reset_Sw0_AND_8449_o1:O)| NONE(*)(RegArray_0_766_LDC)| 1     |
+---------------------------------------------+----------------------------+-------+
+(*) These 8 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -390,38 +1906,40 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.773ns (Maximum Frequency: 265.073MHz)
-   Minimum input arrival time before clock: 5.577ns
+   Minimum period: 5.743ns (Maximum Frequency: 174.120MHz)
+   Minimum input arrival time before clock: 7.507ns
    Maximum output required time after clock: 7.175ns
-   Maximum combinational path delay: 7.459ns
+   Maximum combinational path delay: 7.525ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'DIV_CLK_1'
-  Clock period: 3.773ns (frequency: 265.073MHz)
-  Total number of paths / destination ports: 510 / 27
+Timing constraint: Default period analysis for Clock 'DIV_CLK_21'
+  Clock period: 5.743ns (frequency: 174.120MHz)
+  Total number of paths / destination ports: 99817 / 1435
 -------------------------------------------------------------------------
-Delay:               3.773ns (Levels of Logic = 3)
-  Source:            syncgen/CounterY_8 (FF)
-  Destination:       syncgen/CounterY_0 (FF)
-  Source Clock:      DIV_CLK_1 rising
-  Destination Clock: DIV_CLK_1 rising
+Delay:               5.743ns (Levels of Logic = 5)
+  Source:            RegArray_0_494_C_494 (FF)
+  Destination:       RegArray_0_462_C_462 (FF)
+  Source Clock:      DIV_CLK_21 rising
+  Destination Clock: DIV_CLK_21 rising
 
-  Data Path: syncgen/CounterY_8 to syncgen/CounterY_0
+  Data Path: RegArray_0_494_C_494 to RegArray_0_462_C_462
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               9   0.447   1.174  syncgen/CounterY_8 (syncgen/CounterY_8)
-     LUT6:I1->O            1   0.203   0.580  syncgen/Mcount_CounterY_val_SW0 (N12)
-     LUT6:I5->O           10   0.205   0.857  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
-     LUT5:I4->O            1   0.205   0.000  syncgen/CounterY_0_rstpot (syncgen/CounterY_0_rstpot)
-     FD:D                      0.102          syncgen/CounterY_0
+     FDC:C->Q             10   0.447   0.961  RegArray_0_494_C_494 (RegArray_0_494_C_494)
+     LUT3:I1->O           20   0.203   1.197  RegArray_0_4941 (RegArray_0_494)
+     LUT6:I4->O            3   0.203   0.651  Mmux_RegArray[15][13]_RegArray[15][13]_MUX_4073_o11 (RegArray[15][13]_RegArray[15][13]_MUX_4073_o)
+     LUT5:I4->O            1   0.205   0.684  Mxor_RegArray[13][15]_RegArray[15][13]_XOR_5573_o_xo<0>1 (RegArray[13][15]_RegArray[15][13]_XOR_5573_o)
+     LUT6:I4->O            1   0.203   0.684  RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>41 (RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>4)
+     LUT6:I4->O            2   0.203   0.000  RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>7 (RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>)
+     FDC:D                     0.102          RegArray_0_462_C_462
     ----------------------------------------
-    Total                      3.773ns (1.162ns logic, 2.611ns route)
-                                       (30.8% logic, 69.2% route)
+    Total                      5.743ns (1.566ns logic, 4.177ns route)
+                                       (27.3% logic, 72.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ClkPort'
@@ -450,56 +1968,59 @@ Delay:               2.126ns (Levels of Logic = 5)
                                        (53.8% logic, 46.2% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'DIV_CLK_21'
-  Clock period: 3.614ns (frequency: 276.740MHz)
-  Total number of paths / destination ports: 55 / 9
+Timing constraint: Default period analysis for Clock 'DIV_CLK_1'
+  Clock period: 5.738ns (frequency: 174.271MHz)
+  Total number of paths / destination ports: 1819 / 164
 -------------------------------------------------------------------------
-Delay:               3.614ns (Levels of Logic = 3)
-  Source:            position_3 (FF)
-  Destination:       position_7 (FF)
-  Source Clock:      DIV_CLK_21 rising
-  Destination Clock: DIV_CLK_21 rising
+Delay:               5.738ns (Levels of Logic = 6)
+  Source:            syncgen/y_1_6 (FF)
+  Destination:       vga_r (FF)
+  Source Clock:      DIV_CLK_1 rising
+  Destination Clock: DIV_CLK_1 rising
 
-  Data Path: position_3 to position_7
+  Data Path: syncgen/y_1_6 to vga_r
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            14   0.447   1.186  position_3 (position_3)
-     LUT5:I2->O            4   0.205   0.684  Maccum_position_cy<5>12_SW0 (N20)
-     LUT5:I4->O            1   0.205   0.580  Maccum_position_cy<5>12_SW2 (N26)
-     LUT6:I5->O            1   0.205   0.000  Maccum_position_xor<7>11 (Result<7>1)
-     FDSE:D                    0.102          position_7
+     FDRE:C->Q            12   0.447   1.013  syncgen/y_1_6 (syncgen/y_1_6)
+     LUT6:I4->O            1   0.203   0.827  Mmux_y[4]_X_1_o_Mux_29_o_9 (Mmux_y[4]_X_1_o_Mux_29_o_9)
+     LUT6:I2->O            1   0.203   0.827  y<4>9_SW0 (N23)
+     LUT6:I2->O            1   0.203   0.684  Mmux_x[4]_y[4]_Mux_44_o_10_SW3 (N321)
+     LUT6:I4->O            1   0.203   0.000  Mmux_x[4]_y[4]_Mux_44_o_4_G (N428)
+     MUXF7:I1->O           1   0.140   0.684  Mmux_x[4]_y[4]_Mux_44_o_4 (Mmux_x[4]_y[4]_Mux_44_o_4)
+     LUT6:I4->O            1   0.203   0.000  vga_r_rstpot (vga_r_rstpot)
+     FD:D                      0.102          vga_r
     ----------------------------------------
-    Total                      3.614ns (1.164ns logic, 2.450ns route)
-                                       (32.2% logic, 67.8% route)
+    Total                      5.738ns (1.704ns logic, 4.034ns route)
+                                       (29.7% logic, 70.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_21'
-  Total number of paths / destination ports: 85 / 32
+  Total number of paths / destination ports: 8135 / 2879
 -------------------------------------------------------------------------
-Offset:              4.616ns (Levels of Logic = 4)
-  Source:            btnD (PAD)
-  Destination:       position_7 (FF)
+Offset:              7.507ns (Levels of Logic = 4)
+  Source:            btnL (PAD)
+  Destination:       RegArray_0_464 (FF)
   Destination Clock: DIV_CLK_21 rising
 
-  Data Path: btnD to position_7
+  Data Path: btnL to RegArray_0_464
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            19   1.222   1.416  btnD_IBUF (LD0_OBUF)
-     LUT5:I0->O            4   0.203   0.684  Maccum_position_cy<5>12_SW0 (N20)
-     LUT5:I4->O            1   0.205   0.580  Maccum_position_cy<5>12_SW2 (N26)
-     LUT6:I5->O            1   0.205   0.000  Maccum_position_xor<7>11 (Result<7>1)
-     FDSE:D                    0.102          position_7
+     IBUF:I->O           277   1.222   2.297  btnL_IBUF (Ld3_OBUF)
+     LUT3:I0->O         1164   0.205   2.591  RegArray[23][31]_RegArray[23][31]_mux_50_OUT<100>11 (RegArray[23][31]_RegArray[23][31]_mux_50_OUT<100>1)
+     LUT6:I1->O            1   0.203   0.684  RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>41 (RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>4)
+     LUT6:I4->O            2   0.203   0.000  RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>7 (RegArray[23][31]_RegArray[23][31]_mux_50_OUT<462>)
+     FDC:D                     0.102          RegArray_0_462_C_462
     ----------------------------------------
-    Total                      4.616ns (1.937ns logic, 2.679ns route)
-                                       (42.0% logic, 58.0% route)
+    Total                      7.507ns (1.935ns logic, 5.572ns route)
+                                       (25.8% logic, 74.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
   Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
-Offset:              4.275ns (Levels of Logic = 2)
+Offset:              4.793ns (Levels of Logic = 2)
   Source:            btnC (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -509,17 +2030,17 @@ Offset:              4.275ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
-     BUF:I->O             45   0.568   1.476  BUF2 (reset)
+     BUF:I->O            145   0.568   1.995  BUF2 (reset)
      FDC:CLR                   0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.275ns (2.220ns logic, 2.055ns route)
-                                       (51.9% logic, 48.1% route)
+    Total                      4.793ns (2.220ns logic, 2.573ns route)
+                                       (46.3% logic, 53.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 21 / 21
+  Total number of paths / destination ports: 57 / 57
 -------------------------------------------------------------------------
-Offset:              5.577ns (Levels of Logic = 4)
+Offset:              6.419ns (Levels of Logic = 3)
   Source:            btnC (PAD)
   Destination:       syncgen/CounterY_0 (FF)
   Destination Clock: DIV_CLK_1 rising
@@ -529,17 +2050,184 @@ Offset:              5.577ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
-     BUF:I->O             45   0.568   1.841  BUF2 (reset)
-     LUT6:I0->O           10   0.203   0.857  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
-     LUT5:I4->O            1   0.205   0.000  syncgen/CounterY_0_rstpot (syncgen/CounterY_0_rstpot)
-     FD:D                      0.102          syncgen/CounterY_0
+     BUF:I->O            145   0.568   1.996  BUF2 (reset)
+     LUT6:I5->O           41   0.205   1.419  syncgen/Mcount_CounterY_val (syncgen/Mcount_CounterY_val)
+     FDRE:R                    0.430          syncgen/CounterY_0
     ----------------------------------------
-    Total                      5.577ns (2.300ns logic, 3.277ns route)
-                                       (41.2% logic, 58.8% route)
+    Total                      6.419ns (2.425ns logic, 3.994ns route)
+                                       (37.8% logic, 62.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw7_AND_9129_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.958ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_359_LDC (LATCH)
+  Destination Clock: reset_Sw7_AND_9129_o falling
+
+  Data Path: btnC to RegArray_0_359_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           97   0.203   1.857  reset_Sw7_AND_9130_o1 (reset_Sw7_AND_9130_o)
+     LDC:CLR                   0.430          RegArray_0_359_LDC
+    ----------------------------------------
+    Total                      6.958ns (2.423ns logic, 4.535ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw6_AND_8491_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.906ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_743_LDC (LATCH)
+  Destination Clock: reset_Sw6_AND_8491_o falling
+
+  Data Path: btnC to RegArray_0_743_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           89   0.203   1.804  reset_Sw6_AND_8492_o1 (reset_Sw6_AND_8492_o)
+     LDC:CLR                   0.430          RegArray_0_743_LDC
+    ----------------------------------------
+    Total                      6.906ns (2.423ns logic, 4.483ns route)
+                                       (35.1% logic, 64.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw5_AND_9115_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.879ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_365_LDC (LATCH)
+  Destination Clock: reset_Sw5_AND_9115_o falling
+
+  Data Path: btnC to RegArray_0_365_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           85   0.203   1.778  reset_Sw5_AND_9116_o1 (reset_Sw5_AND_9116_o)
+     LDC:CLR                   0.430          RegArray_0_365_LDC
+    ----------------------------------------
+    Total                      6.879ns (2.423ns logic, 4.456ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw4_AND_8477_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.833ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_749_LDC (LATCH)
+  Destination Clock: reset_Sw4_AND_8477_o falling
+
+  Data Path: btnC to RegArray_0_749_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           78   0.203   1.732  reset_Sw4_AND_8478_o1 (reset_Sw4_AND_8478_o)
+     LDC:CLR                   0.430          RegArray_0_749_LDC
+    ----------------------------------------
+    Total                      6.833ns (2.423ns logic, 4.410ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw3_AND_9101_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.879ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_374_LDC (LATCH)
+  Destination Clock: reset_Sw3_AND_9101_o falling
+
+  Data Path: btnC to RegArray_0_374_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           85   0.203   1.778  reset_Sw3_AND_9102_o1 (reset_Sw3_AND_9102_o)
+     LDC:CLR                   0.430          RegArray_0_374_LDC
+    ----------------------------------------
+    Total                      6.879ns (2.423ns logic, 4.456ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw2_AND_8463_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.833ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_757_LDC (LATCH)
+  Destination Clock: reset_Sw2_AND_8463_o falling
+
+  Data Path: btnC to RegArray_0_757_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           78   0.203   1.732  reset_Sw2_AND_8464_o1 (reset_Sw2_AND_8464_o)
+     LDC:CLR                   0.430          RegArray_0_757_LDC
+    ----------------------------------------
+    Total                      6.833ns (2.423ns logic, 4.410ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw1_AND_9087_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.879ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_383_LDC (LATCH)
+  Destination Clock: reset_Sw1_AND_9087_o falling
+
+  Data Path: btnC to RegArray_0_383_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           85   0.203   1.778  reset_Sw1_AND_9088_o1 (reset_Sw1_AND_9088_o)
+     LDC:CLR                   0.430          RegArray_0_383_LDC
+    ----------------------------------------
+    Total                      6.879ns (2.423ns logic, 4.456ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset_Sw0_AND_8449_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              6.833ns (Levels of Logic = 3)
+  Source:            btnC (PAD)
+  Destination:       RegArray_0_766_LDC (LATCH)
+  Destination Clock: reset_Sw0_AND_8449_o falling
+
+  Data Path: btnC to RegArray_0_766_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btnC_IBUF (btnC_IBUF)
+     BUF:I->O            145   0.568   2.100  BUF2 (reset)
+     LUT2:I0->O           78   0.203   1.732  reset_Sw0_AND_8450_o1 (reset_Sw0_AND_8450_o)
+     LDC:CLR                   0.430          RegArray_0_766_LDC
+    ----------------------------------------
+    Total                      6.833ns (2.423ns logic, 4.410ns route)
+                                       (35.5% logic, 64.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
 Offset:              4.382ns (Levels of Logic = 2)
   Source:            syncgen/vga_HS (FF)
@@ -583,27 +2271,27 @@ Offset:              7.175ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_21'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              4.382ns (Levels of Logic = 2)
+Offset:              5.871ns (Levels of Logic = 2)
   Source:            state (FF)
-  Destination:       LD6 (PAD)
+  Destination:       Ld6 (PAD)
   Source Clock:      DIV_CLK_21 rising
 
-  Data Path: state to LD6
+  Data Path: state to Ld6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.447   0.579  state (state)
-     INV:I->O              1   0.206   0.579  LD61_INV_0 (LD6_OBUF)
-     OBUF:I->O                 2.571          LD6_OBUF (LD6)
+     FDCE:C->Q           272   0.447   2.068  state (state)
+     INV:I->O              1   0.206   0.579  _n338851_INV_0 (Ld6_OBUF)
+     OBUF:I->O                 2.571          Ld6_OBUF (Ld6)
     ----------------------------------------
-    Total                      4.382ns (3.224ns logic, 1.158ns route)
-                                       (73.6% logic, 26.4% route)
+    Total                      5.871ns (3.224ns logic, 2.647ns route)
+                                       (54.9% logic, 45.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 68 / 11
 -------------------------------------------------------------------------
-Delay:               7.459ns (Levels of Logic = 5)
+Delay:               7.525ns (Levels of Logic = 5)
   Source:            Sw1 (PAD)
   Destination:       Cd (PAD)
 
@@ -611,14 +2299,14 @@ Delay:               7.459ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.222   0.721  Sw1_IBUF (Sw1_IBUF)
+     IBUF:I->O             4   1.222   0.788  Sw1_IBUF (Sw1_IBUF)
      LUT3:I1->O            7   0.203   1.138  Mmux_SSD<1>11 (SSD<1>)
      LUT6:I0->O            2   0.203   0.617  Mram_SSD_CATHODES61 (Ca_OBUF)
      LUT5:I4->O            1   0.205   0.579  Mram_SSD_CATHODES3 (Cd_OBUF)
      OBUF:I->O                 2.571          Cd_OBUF (Cd)
     ----------------------------------------
-    Total                      7.459ns (4.404ns logic, 3.055ns route)
-                                       (59.0% logic, 41.0% route)
+    Total                      7.525ns (4.404ns logic, 3.121ns route)
+                                       (58.5% logic, 41.5% route)
 
 =========================================================================
 
@@ -634,33 +2322,49 @@ ClkPort        |    2.126|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock DIV_CLK_1
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-DIV_CLK_1      |    3.773|         |         |         |
-DIV_CLK_21     |    5.527|         |         |         |
----------------+---------+---------+---------+---------+
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DIV_CLK_1           |    5.738|         |         |         |
+DIV_CLK_21          |    7.219|         |         |         |
+reset_Sw0_AND_8449_o|         |    8.496|         |         |
+reset_Sw1_AND_9087_o|         |    8.721|         |         |
+reset_Sw2_AND_8463_o|         |    8.446|         |         |
+reset_Sw3_AND_9101_o|         |    8.626|         |         |
+reset_Sw4_AND_8477_o|         |    8.606|         |         |
+reset_Sw5_AND_9115_o|         |    8.821|         |         |
+reset_Sw6_AND_8491_o|         |    8.616|         |         |
+reset_Sw7_AND_9129_o|         |    8.697|         |         |
+--------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock DIV_CLK_21
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-DIV_CLK_21     |    3.614|         |         |         |
----------------+---------+---------+---------+---------+
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DIV_CLK_21          |    5.743|         |         |         |
+reset_Sw0_AND_8449_o|         |    7.147|         |         |
+reset_Sw1_AND_9087_o|         |    7.044|         |         |
+reset_Sw2_AND_8463_o|         |    7.154|         |         |
+reset_Sw3_AND_9101_o|         |    7.072|         |         |
+reset_Sw4_AND_8477_o|         |    7.152|         |         |
+reset_Sw5_AND_9115_o|         |    7.177|         |         |
+reset_Sw6_AND_8491_o|         |    7.176|         |         |
+reset_Sw7_AND_9129_o|         |    7.032|         |         |
+--------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.84 secs
+Total REAL time to Xst completion: 153.00 secs
+Total CPU time to Xst completion: 153.26 secs
  
 --> 
 
-Total memory usage is 411932 kilobytes
+Total memory usage is 554904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   15 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

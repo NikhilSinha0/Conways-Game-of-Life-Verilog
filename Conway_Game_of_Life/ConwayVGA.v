@@ -3,14 +3,14 @@
 module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6, Sw5, Sw4, Sw3, Sw2, Sw1, Sw0, btnU, btnD,
 	btnR, btnC, btnL, St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar, Mt_St_we_bar,
 	An0, An1, An2, An3, Ca, Cb, Cc, Cd, Ce, Cf, Cg, Dp,
-	LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7);
+	Ld0, Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7);
 	input ClkPort;
 	input	btnL, btnU, btnD, btnR, btnC;	
 	input	Sw7, Sw6, Sw5, Sw4, Sw3, Sw2, Sw1, Sw0;
 	output St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar, Mt_St_we_bar;
 	output vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b;
 	output An0, An1, An2, An3, Ca, Cb, Cc, Cd, Ce, Cf, Cg, Dp;
-	output LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7;
+	output Ld0, Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7;
 	reg vga_r, vga_g, vga_b;
 	
 	//////////////////////////////////////////////////////////////////////////////////////////
@@ -38,30 +38,36 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	wire inDisplayArea;
 	wire [9:0] CounterX;
 	wire [9:0] CounterY;
-	reg [63:0] RegArray [0:47];
+	wire [6:0] x;
+	wire [6:0] y;
+	reg [31:0] RegArray [23:0];
 	reg state;
 	integer i, j;
 
-	hvsync_generator syncgen(.clk(clk), .reset(reset),.vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
+	hvsync_generator syncgen(.clk(clk), .reset(reset), .vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY), .x(x), .y(y));
 	
 	/////////////////////////////////////////////////////////////////
 	///////////////		VGA control starts here		/////////////////
 	/////////////////////////////////////////////////////////////////
 	reg [9:0] position;
 	
+	
 	always @(posedge DIV_CLK[21])
 		begin
 			if(reset)
-				position<=240;
+				position<=12;
 			else if(btnD && ~btnU)
 				position<=position+2;
 			else if(btnU && ~btnD)
 				position<=position-2;	
 		end
+	
+	wire bounded = CounterY < 192 && CounterX < 256;	
+	wire isAlive = bounded ? RegArray[y][x] : 0;
 
-	wire R = CounterY>=(position-10) && CounterY<=(position+10) && CounterX[8:5]==7;
-	wire G = CounterX>100 && CounterX<200 && CounterY[5:3]==7;
-	wire B = 0;
+	wire R = isAlive;
+	wire G = isAlive;
+	wire B = isAlive;
 	
 	always @(posedge clk)
 	begin
@@ -76,12 +82,12 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 		if(reset)
 		begin
 			state<=0;
-			for(i = 0; i < 48; i = i + 1)
+			for(i = 0; i < 24; i = i + 1)
 			begin
-				for(j = 0; j < 64; j = j + 1)
+				for(j = 0; j < 32; j = j + 1)
 				begin
-					if((Sw0 && i > 24 && j > 48)||(Sw1 && i < 24 && j > 48)||(Sw2 && i > 24 && j > 32 && j < 48)||(Sw3 && i < 24 && j < 48 && j > 32)||
-					(Sw4 && i > 24 && j < 32 && j > 16)||(Sw5 && i < 24 && j < 32 && j > 16)||(Sw6 && i > 24 && j < 16)||(Sw7 && i < 24 && j < 16))
+					if((Sw0 && i > 12 && j > 24)||(Sw1 && i < 12 && j > 24)||(Sw2 && i > 12 && j > 16 && j < 24)||(Sw3 && i < 12 && j < 24 && j > 16)||
+					(Sw4 && i > 12 && j < 16 && j > 8)||(Sw5 && i < 12 && j < 16 && j > 8)||(Sw6 && i > 12 && j < 8)||(Sw7 && i < 12 && j < 8))
 						RegArray[i][j]<=1'b1;
 					else
 						RegArray[i][j]<=0;
@@ -94,17 +100,17 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 			state<=1'b1;
 		else if(state==1'b1)
 		begin
-			for(i = 0; i < 48; i = i + 1)
+			for(i = 0; i < 24; i = i + 1)
 			begin
-				for(j = 0; j < 64; j = j + 1)
+				for(j = 0; j < 32; j = j + 1)
 				begin
 					A = (i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
 					B = (i==0) ? 1'b0 : RegArray[i-1][j];
-					C = (i==0 || j==63) ? 1'b0 : RegArray[i-1][j+1];
-					D = (j==63) ? 1'b0 : RegArray[i][j+1];
-					E = (i==47 || j==63) ? 1'b0 : RegArray[i+1][j+1];
-					F = (i==47) ? 1'b0 : RegArray[i+1][j];
-					G = (i==47 || j==0) ? 1'b0 : RegArray[i+1][j-1];
+					C = (i==0 || j==31) ? 1'b0 : RegArray[i-1][j+1];
+					D = (j==31) ? 1'b0 : RegArray[i][j+1];
+					E = (i==23 || j==31) ? 1'b0 : RegArray[i+1][j+1];
+					F = (i==23) ? 1'b0 : RegArray[i+1][j];
+					G = (i==23 || j==0) ? 1'b0 : RegArray[i+1][j-1];
 					H = (i==0) ? 1'b0 : RegArray[i-1][j];
 					top4 = A&B&C&D;
 					bot4 = E&F&G&H;
@@ -114,7 +120,6 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 					bot1 = E^F^G^H;
 					Mux = top1? (bot1? (~(top2|bot2)&RegArray[i][j]) : (top2^bot2)) : (bot1? (top2^bot2) : ((top2^bot2)&RegArray[i][j]));
 					RegArray[i][j] <= Mux & ~top4 &~bot4;
-					//RegArray[i][j]<=WireArray[i][j];
 				end
 			end
 		end
@@ -125,16 +130,16 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	/////////////////////////////////////////////////////////////////
 	
 	/////////////////////////////////////////////////////////////////
-	//////////////  	  LD control starts here 	 ///////////////////
+	//////////////  	  Ld control starts here 	 ///////////////////
 	/////////////////////////////////////////////////////////////////
 	
-	wire LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7;
+	wire Ld0, Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7;
 	
-	assign {LD7, LD6, LD5, LD4} = {state, ~state, 1'b0, 1'b0};
-	assign {LD3, LD2, LD1, LD0} = {btnL, btnU, btnR, btnD}; // Reset is driven by BtnC
+	assign {Ld7, Ld6, Ld5, Ld4} = {state, ~state, 1'b0, 1'b0};
+	assign {Ld3, Ld2, Ld1, Ld0} = {btnL, btnU, btnR, btnD}; // Reset is driven by BtnC
 	
 	/////////////////////////////////////////////////////////////////
-	//////////////  	  LD control ends here 	 	////////////////////
+	//////////////  	  Ld control ends here 	 	////////////////////
 	/////////////////////////////////////////////////////////////////
 	
 	/////////////////////////////////////////////////////////////////

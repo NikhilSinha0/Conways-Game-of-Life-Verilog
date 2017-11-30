@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.ncd
-OUTFILE=C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.bit
+INFILE=C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.ncd
+OUTFILE=C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life\ConwayVGA.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\nikhi\Downloads\EE354 Files\EE354_Final_Project\EE354-Final-Project\Conway_Game_of_Life
+WORKINGDIR=C:\Users\Win10\Documents\GitHub\ee\EE354-Final-Project\Conway_Game_of_Life
 LICENSE=WebPack
-USER_INFO=211293982_0_0_816
+USER_INFO=211296748_0_0_510

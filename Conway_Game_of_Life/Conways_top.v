@@ -49,8 +49,8 @@ module Conways_top
 	wire		board_clk, sys_clk;
 	wire [1:0] 	ssdscan_clk;
 	reg [26:0]	DIV_CLK;
-	wire [7:0] WireArray [0:640];
-	reg [7:0] RegArray [0:640];
+	wire [63:0] WireArray [0:47];
+	reg [63:0] RegArray [0:47];
 	wire Start_Ack_Pulse;
 	wire in_AB_Pulse, CEN_Pulse, BtnR_Pulse, BtnU_Pulse;
 	wire q_I, q_Run;
@@ -73,7 +73,7 @@ module Conways_top
 	// In this design, we run the core design at full 50MHz clock!
 	assign	sys_clk = board_clk;
 	// assign	sys_clk = DIV_CLK[25];
-always @(posedge board_clk, posedge Reset) 	
+	always @(posedge board_clk, posedge Reset) 	
     begin							
         if (Reset)
 		DIV_CLK <= 0;
@@ -132,16 +132,16 @@ always @(posedge board_clk, posedge Reset)
 //------------
 // DESIGN
 	always @ (posedge sys_clk, posedge Reset)
-	begin
+	begin : DESIGN
 		reg top4, top2, top1, bot4, bot2, bot1, Mux, A, B, C, D, E, F, G, H;
 		if(Reset)
 		begin
 			state<=0;
-			for(i = 0; i < 480; i = i + 1)
+			for(i = 0; i < 40; i = i + 1)
 			begin
-				for(j = 0; j < 640; j = j + 1)
+				for(j = 0; j < 64; j = j + 1)
 				begin
-					if(Sw0 && i > 400)
+					if(Sw0 && i > 40)
 						RegArray[i][j]<=1'b1;
 					else
 						RegArray[i][j]<=0;
@@ -154,18 +154,18 @@ always @(posedge board_clk, posedge Reset)
 			state<=1'b1;
 		else if(state==1'b1)
 		begin
-			for(i = 0; i < 480; i = i + 1)
+			for(i = 0; i < 48; i = i + 1)
 			begin
-				for(j = 0; j < 640; j = j + 1)
+				for(j = 0; j < 64; j = j + 1)
 				begin
 					A = (i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
-					B = (i==0) ? 1'b0 : RegArray[i-1][j-1];
-					C = (i==0 || j==639) ? 1'b0 : RegArray[i-1][j-1];
-					D = (j==639) ? 1'b0 : RegArray[i-1][j-1];
-					E = (i==479 || j==639) ? 1'b0 : RegArray[i-1][j-1];
-					F = (i==479) ? 1'b0 : RegArray[i-1][j-1];
-					G = (i==479 || j==0) ? 1'b0 : RegArray[i-1][j-1];
-					H = (i==0) ? 1'b0 : RegArray[i-1][j-1];
+					B = (i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					C = (i==0 || j ==0 || j==63) ? 1'b0 : RegArray[i-1][j-1];
+					D = (j==63 || i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					E = (i==47 || j==63 || i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					F = (i==47 || i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					G = (i==47 || i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
+					H = (i==0 || j==0) ? 1'b0 : RegArray[i-1][j-1];
 					top4 = A&B&C&D;
 					bot4 = E&F&G&H;
 					top2 = A? (B? ~(C|D) : (C^D)) : (B? (C^D) : (C&D));

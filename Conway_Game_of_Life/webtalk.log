@@ -4,7 +4,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Project Information
 --------------------
 ProjectID=691E3242EF8542B1A20A6CC6CE3B5A66
-ProjectIteration=6
+ProjectIteration=13
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:5 - C:/Users/nikhi/Downloads/EE354 Files/EE354_Final_Project/EE354-Final-Project/Conway_Game_of_Life/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:5 - C:/Users/Win10/Documents/GitHub/ee/EE354-Final-Project/Conway_Game_of_Life/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
