@@ -5,7 +5,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\.
    "ConwayVGA" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 Opened constraints file ConwayVGA.pcf.
 
-Thu Nov 30 10:10:07 2017
+Fri Dec 01 01:07:18 2017
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g Reset_on_err:No -g ConfigRate:2 -g ProgPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:No -g SPI_buswidth:1 -g TIMER_CFG:0xFFFF -g multipin_wakeup:No -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No -g en_sw_gsr:No -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 ConwayVGA.ncd 
 
@@ -128,31 +128,46 @@ There were 0 CONFIG constraint(s) processed from ConwayVGA.pcf.
 
 
 Running DRC.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw3_AND_9101_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_1547_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw5_AND_9115_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_1563_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw1_AND_9087_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_1579_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_9123_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_1595_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw4_AND_8477_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_827_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw6_AND_8491_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_793_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw0_AND_8449_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw5_AND_2279_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw2_AND_8463_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_779_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-DRC detected 0 errors and 8 warnings.  Please see the previously displayed
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_811_o is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_795_o is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw3_AND_2265_o is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw1_AND_2251_o is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_Sw7_AND_2293_o is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+DRC detected 0 errors and 13 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "conwayvga.bit".

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-UL0LI1R::  Thu Nov 30 10:09:16 2017
+DESKTOP-UL0LI1R::  Fri Dec 01 01:06:22 2017
 
 par -w -intstyle ise -ol high -mt off ConwayVGA_map.ncd ConwayVGA.ncd
 ConwayVGA.pcf 
@@ -22,30 +22,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,520 out of  18,224    8%
-    Number used as Flip Flops:               1,512
-    Number used as Latches:                      8
+  Number of Slice Registers:                 1,629 out of  18,224    8%
+    Number used as Flip Flops:               1,616
+    Number used as Latches:                     13
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      6,705 out of   9,112   73%
-    Number used as logic:                    6,699 out of   9,112   73%
-      Number using O6 output only:           6,621
-      Number using O5 output only:              36
-      Number using O5 and O6:                   42
+  Number of Slice LUTs:                      6,227 out of   9,112   68%
+    Number used as logic:                    6,218 out of   9,112   68%
+      Number using O6 output only:           5,358
+      Number using O5 output only:              39
+      Number using O5 and O6:                  821
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      6
-      Number with same-slice register load:      3
+    Number used exclusively as route-thrus:      9
+      Number with same-slice register load:      6
       Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,243 out of   2,278   98%
-  Number of MUXCYs used:                        48 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:        6,792
-    Number with an unused Flip Flop:         5,284 out of   6,792   77%
-    Number with an unused LUT:                  87 out of   6,792    1%
-    Number of fully used LUT-FF pairs:       1,421 out of   6,792   20%
+  Number of occupied Slices:                 2,155 out of   2,278   94%
+  Number of MUXCYs used:                        52 out of   4,556    1%
+  Number of LUT Flip Flop pairs used:        6,340
+    Number with an unused Flip Flop:         4,720 out of   6,340   74%
+    Number with an unused LUT:                 113 out of   6,340    1%
+    Number of fully used LUT-FF pairs:       1,507 out of   6,340   23%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -57,7 +57,7 @@ Slice Logic Distribution:
 
 IO Utilization:
   Number of bonded IOBs:                        44 out of     232   18%
-    Number of LOCed IOBs:                       43 out of      44   97%
+    Number of LOCed IOBs:                       44 out of      44  100%
     IOB Flip Flops:                              1
 
 Specific Feature Utilization:
@@ -91,35 +91,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
 
 Starting Router
 
 
-Phase  1  : 39974 unrouted;      REAL time: 7 secs 
+Phase  1  : 40231 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 38568 unrouted;      REAL time: 8 secs 
+Phase  2  : 37884 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 20452 unrouted;      REAL time: 18 secs 
+Phase  3  : 20620 unrouted;      REAL time: 20 secs 
 
-Phase  4  : 20452 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+Phase  4  : 20620 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 21 secs 
 
 Updating file: ConwayVGA.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 31 secs 
-Total REAL time to Router completion: 31 secs 
-Total CPU time to Router completion: 31 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
+Total REAL time to Router completion: 36 secs 
+Total CPU time to Router completion: 36 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -137,35 +137,45 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|     DIV_CLK_21_BUFG |  BUFGMUX_X2Y3| No   | 1296 |  0.515     |  1.361      |
+|      DIV_CLK_1_BUFG |  BUFGMUX_X2Y2| No   |   20 |  0.017     |  0.870      |
 +---------------------+--------------+------+------+------------+-------------+
-|      DIV_CLK_1_BUFG |  BUFGMUX_X2Y2| No   |   19 |  0.013     |  0.859      |
+|     DIV_CLK_24_BUFG |  BUFGMUX_X2Y3| No   | 1459 |  0.516     |  1.362      |
 +---------------------+--------------+------+------+------------+-------------+
-|       ClkPort_BUFGP | BUFGMUX_X3Y13| No   |    6 |  0.007     |  0.863      |
+|       ClkPort_BUFGP | BUFGMUX_X3Y13| No   |    7 |  0.011     |  0.867      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw3_AND_9101_o |              |      |      |            |             |
-|                     |         Local|      |   80 |  0.000     |  0.581      |
+|reset_Sw7_AND_1547_o |              |      |      |            |             |
+|                     |         Local|      |   72 |  0.000     |  1.417      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw5_AND_9115_o |              |      |      |            |             |
-|                     |         Local|      |   78 |  0.000     |  0.563      |
+|reset_Sw7_AND_1563_o |              |      |      |            |             |
+|                     |         Local|      |   72 |  0.000     |  1.101      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw1_AND_9087_o |              |      |      |            |             |
-|                     |         Local|      |   75 |  0.000     |  0.559      |
+|reset_Sw7_AND_1579_o |              |      |      |            |             |
+|                     |         Local|      |   77 |  0.000     |  1.434      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw7_AND_9123_o |              |      |      |            |             |
-|                     |         Local|      |   89 |  0.000     |  1.404      |
+|reset_Sw7_AND_1595_o |              |      |      |            |             |
+|                     |         Local|      |   86 |  0.000     |  1.270      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw4_AND_8477_o |              |      |      |            |             |
-|                     |         Local|      |   73 |  0.000     |  0.765      |
+| reset_Sw7_AND_827_o |         Local|      |   79 |  0.000     |  1.778      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw6_AND_8491_o |              |      |      |            |             |
-|                     |         Local|      |   84 |  0.000     |  1.457      |
+| reset_Sw7_AND_793_o |         Local|      |   99 |  0.000     |  1.660      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw0_AND_8449_o |              |      |      |            |             |
-|                     |         Local|      |   72 |  0.000     |  0.604      |
+|reset_Sw5_AND_2279_o |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.000     |  0.728      |
 +---------------------+--------------+------+------+------------+-------------+
-|reset_Sw2_AND_8463_o |              |      |      |            |             |
-|                     |         Local|      |   73 |  0.000     |  1.541      |
+| reset_Sw7_AND_779_o |         Local|      |   70 |  0.000     |  1.354      |
++---------------------+--------------+------+------+------------+-------------+
+| reset_Sw7_AND_811_o |         Local|      |   73 |  0.000     |  1.053      |
++---------------------+--------------+------+------+------------+-------------+
+| reset_Sw7_AND_795_o |         Local|      |   75 |  0.000     |  1.110      |
++---------------------+--------------+------+------+------------+-------------+
+|reset_Sw3_AND_2265_o |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.000     |  0.743      |
++---------------------+--------------+------+------+------------+-------------+
+|reset_Sw1_AND_2251_o |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.000     |  0.752      |
++---------------------+--------------+------+------+------------+-------------+
+|reset_Sw7_AND_2293_o |              |      |      |            |             |
+|                     |         Local|      |    9 |  0.000     |  0.908      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -185,8 +195,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     8.028ns|     1.972ns|       0|           0
-  pin" 100 MHz HIGH 50%                     | HOLD        |     0.529ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     8.033ns|     1.967ns|       0|           0
+  pin" 100 MHz HIGH 50%                     | HOLD        |     0.503ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -197,8 +207,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 33 secs 
-Total CPU time to PAR completion: 32 secs 
+Total REAL time to PAR completion: 38 secs 
+Total CPU time to PAR completion: 37 secs 
 
 Peak Memory Usage:  450 MB
 

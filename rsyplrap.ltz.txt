@@ -1,0 +1,99 @@
+﻿added vga/bugfixes
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Thu Nov 30 11:21:54 2017 -0800
+#
+# On branch Top_File
+# Your branch is ahead of 'origin/Top_File' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   ConwayVGA.bld
+#	modified:   ConwayVGA.cmd_log
+#	modified:   ConwayVGA.ncd
+#	modified:   ConwayVGA.ngc
+#	modified:   ConwayVGA.ngd
+#	modified:   ConwayVGA.ngr
+#	modified:   ConwayVGA.pad
+#	modified:   ConwayVGA.par
+#	modified:   ConwayVGA.pcf
+#	modified:   ConwayVGA.ptwx
+#	modified:   ConwayVGA.syr
+#	modified:   ConwayVGA.twr
+#	modified:   ConwayVGA.twx
+#	modified:   ConwayVGA.unroutes
+#	modified:   ConwayVGA.v
+#	modified:   ConwayVGA_bitgen.xwbt
+#	modified:   ConwayVGA_guide.ncd
+#	modified:   ConwayVGA_map.map
+#	modified:   ConwayVGA_map.mrp
+#	deleted:    ConwayVGA_map.ncd
+#	modified:   ConwayVGA_map.ngm
+#	modified:   ConwayVGA_map.xrpt
+#	modified:   ConwayVGA_ngdbuild.xrpt
+#	modified:   ConwayVGA_pad.csv
+#	modified:   ConwayVGA_pad.txt
+#	modified:   ConwayVGA_par.xrpt
+#	modified:   ConwayVGA_summary.html
+#	modified:   ConwayVGA_summary.xml
+#	modified:   ConwayVGA_usage.xml
+#	modified:   ConwayVGA_xst.xrpt
+#	modified:   Conway_Game_of_Life.gise
+#	modified:   Conway_Game_of_Life.xise
+#	modified:   Conways_top.cmd_log
+#	modified:   Conways_top.prj
+#	modified:   Conways_top.syr
+#	modified:   Conways_top.v
+#	modified:   Conways_top_xst.xrpt
+#	modified:   _ngo/netlist.lst
+#	modified:   _xmsgs/bitgen.xmsgs
+#	modified:   _xmsgs/map.xmsgs
+#	modified:   _xmsgs/pn_parser.xmsgs
+#	modified:   _xmsgs/xst.xmsgs
+#	modified:   conwayvga.bgn
+#	modified:   conwayvga.bit
+#	modified:   conwayvga.drc
+#	modified:   hvsync_generator.v
+#	new file:   iseconfig/ConwayVGA.xreport
+#	modified:   nexys3.ucf
+#	modified:   par_usage_statistics.html
+#	modified:   usage_statistics_webtalk.html
+#	modified:   webtalk.log
+#	modified:   webtalk_pn.xml
+#	modified:   xlnx_auto_0_xdb/cst.xbcd
+#	modified:   xst/work/work.sdbl
+#	modified:   xst/work/work.sdbx
+#
+# Changes not staged for commit:
+#	modified:   ConwayVGA.cmd_log
+#	modified:   ConwayVGA.ncd
+#	modified:   ConwayVGA.pad
+#	modified:   ConwayVGA.par
+#	modified:   ConwayVGA.pcf
+#	modified:   ConwayVGA.ptwx
+#	modified:   ConwayVGA.twr
+#	modified:   ConwayVGA.twx
+#	modified:   ConwayVGA.unroutes
+#	modified:   ConwayVGA_guide.ncd
+#	modified:   ConwayVGA_map.map
+#	modified:   ConwayVGA_map.mrp
+#	modified:   ConwayVGA_map.xrpt
+#	modified:   ConwayVGA_pad.csv
+#	modified:   ConwayVGA_pad.txt
+#	modified:   ConwayVGA_par.xrpt
+#	modified:   ConwayVGA_summary.xml
+#	modified:   ConwayVGA_usage.xml
+#	modified:   _xmsgs/bitgen.xmsgs
+#	modified:   _xmsgs/map.xmsgs
+#	modified:   conwayvga.bgn
+#	modified:   conwayvga.drc
+#	modified:   par_usage_statistics.html
+#	modified:   webtalk_pn.xml
+#
+# Untracked files:
+#	ConwayVGA_map.ncd
+#	../kwvocq1x.qoo.txt
+#
+

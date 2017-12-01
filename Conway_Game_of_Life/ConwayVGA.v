@@ -49,23 +49,11 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 	/////////////////////////////////////////////////////////////////
 	///////////////		VGA control starts here		/////////////////
 	/////////////////////////////////////////////////////////////////
-	reg [9:0] position;
 	
-	
-	always @(posedge DIV_CLK[21])
-		begin
-			if(reset)
-				position<=12;
-			else if(btnD && ~btnU)
-				position<=position+2;
-			else if(btnU && ~btnD)
-				position<=position-2;	
-		end
-	
-	wire bounded = CounterY < 192 && CounterX < 256;	
+	wire bounded = CounterY < 384 && CounterX < 512;	
 	wire isAlive = bounded ? RegArray[y][x] : 0;
 
-	wire R = isAlive;
+	wire R = isAlive | ~bounded;
 	wire G = isAlive;
 	wire B = isAlive;
 	
@@ -76,9 +64,10 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 		vga_b <= B & inDisplayArea;
 	end
 	
-	always @ (posedge DIV_CLK[21], posedge reset)
+	always @ (posedge DIV_CLK[24], posedge reset)
 	begin: Game
-		reg top4, top2, top1, bot4, bot2, bot1, Mux, A, B, C, D, E, F, G, H;
+		reg A, B, C, D, E, F, G, H;
+		reg [3:0] aCount;
 		if(reset)
 		begin
 			state<=0;
@@ -89,6 +78,14 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 					if((Sw0 && i > 12 && j > 24)||(Sw1 && i < 12 && j > 24)||(Sw2 && i > 12 && j > 16 && j < 24)||(Sw3 && i < 12 && j < 24 && j > 16)||
 					(Sw4 && i > 12 && j < 16 && j > 8)||(Sw5 && i < 12 && j < 16 && j > 8)||(Sw6 && i > 12 && j < 8)||(Sw7 && i < 12 && j < 8))
 						RegArray[i][j]<=1'b1;
+					else if(~(Sw7 || Sw6 || Sw5 || Sw4 || Sw3 || Sw2 || Sw1 || Sw0))
+					begin
+						if (i % (j + i + 1))
+							RegArray[i][j]<=1'b1;
+						else
+							RegArray[i][j]<=0;
+							
+					end
 					else
 						RegArray[i][j]<=0;
 				end
@@ -111,15 +108,10 @@ module ConwayVGA(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw7, Sw6,
 					E = (i==23 || j==31) ? 1'b0 : RegArray[i+1][j+1];
 					F = (i==23) ? 1'b0 : RegArray[i+1][j];
 					G = (i==23 || j==0) ? 1'b0 : RegArray[i+1][j-1];
-					H = (i==0) ? 1'b0 : RegArray[i-1][j];
-					top4 = A&B&C&D;
-					bot4 = E&F&G&H;
-					top2 = A? (B? ~(C|D) : (C^D)) : (B? (C^D) : (C&D));
-					bot2 = E? (F? ~(G|H) : (G^H)) : (F? (G^H) : (G&H));
-					top1 = A^B^C^D;
-					bot1 = E^F^G^H;
-					Mux = top1? (bot1? (~(top2|bot2)&RegArray[i][j]) : (top2^bot2)) : (bot1? (top2^bot2) : ((top2^bot2)&RegArray[i][j]));
-					RegArray[i][j] <= Mux & ~top4 &~bot4;
+					H = (j==0) ? 1'b0 : RegArray[i][j-1];
+					
+					aCount = A + B + C + D + E + F + G + H;
+					RegArray[i][j] <= (aCount == 3) || (aCount == 2 && RegArray[i][j]);
 				end
 			end
 		end

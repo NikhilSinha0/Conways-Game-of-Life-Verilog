@@ -40,7 +40,7 @@ begin
 		end
    else begin
 	   CounterX <= CounterX + 1;
-		if (CounterX[2:0] == 3'b111)
+		if (CounterX[3:0] == 4'b1111)
 			x <= x + 1;
 		end
 end
@@ -57,7 +57,7 @@ begin
 		end
    else if(CounterX==10'h320) begin   //800
       CounterY <= CounterY + 1;
-		if (CounterY[2:0] == 3'b111)
+		if (CounterY[3:0] == 4'b1111)
 			y <= y + 1;
 		end
 end
